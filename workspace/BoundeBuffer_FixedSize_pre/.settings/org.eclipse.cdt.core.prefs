@@ -1,0 +1,11 @@
+doxygen/doxygen_new_line_after_brief=true
+doxygen/doxygen_use_brief_tag=false
+doxygen/doxygen_use_javadoc_tags=true
+doxygen/doxygen_use_pre_tag=false
+doxygen/doxygen_use_structural_commands=false
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1576813201/PATH/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1576813201/PATH/operation=append
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1576813201/PATH/value=/opt/homebrew/bin\:/usr/local/bin\:/opt/homebrew/bin\:/opt/homebrew/sbin\:/usr/local/bin\:/usr/bin\:/bin\:/usr/sbin\:/sbin\:/Library/TeX/texbin\:/Applications/Little Snitch.app/Contents/Components\:/Library/Apple/usr/bin
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1576813201/append=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1576813201/appendContributed=true

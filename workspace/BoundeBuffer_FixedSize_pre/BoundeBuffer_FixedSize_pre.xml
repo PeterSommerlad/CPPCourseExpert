@@ -1,0 +1,12 @@
+<testsuites>
+	<testsuite name="BoundedBuffer Signature Tests" tests="0">
+	</testsuite>
+	<testsuite name="BoundedBuffer Default Behavior Tests" tests="0">
+	</testsuite>
+	<testsuite name="BoundedBuffer Content Tests" tests="0">
+	</testsuite>
+	<testsuite name="BoundedBuffer Semantic Tests" tests="0">
+	</testsuite>
+	<testsuite name="BoundedBuffer Student Tests" tests="0">
+	</testsuite>
+</testsuites>

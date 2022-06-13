@@ -1,0 +1,25 @@
+<testsuites>
+	<testsuite name="AllTests" tests="21">
+		<testcase classname="AllTests" name="Adding1plus1Istwo"/>
+		<testcase classname="AllTests" name="Subtracting4From6Is2"/>
+		<testcase classname="AllTests" name="Multiply2By3Is6"/>
+		<testcase classname="AllTests" name="Divide6By3Is2"/>
+		<testcase classname="AllTests" name="testSimpleAddition"/>
+		<testcase classname="AllTests" name="testReadNumber"/>
+		<testcase classname="AllTests" name="testReadNumberEmptyFails"/>
+		<testcase classname="AllTests" name="testReadNumberWithNonNumber"/>
+		<testcase classname="AllTests" name="testReadOperationEmptyFails"/>
+		<testcase classname="AllTests" name="testReadOperationInvalidSymbolFails"/>
+		<testcase classname="AllTests" name="testReadOperationResult"/>
+		<testcase classname="AllTests" name="testReadOperationAll"/>
+		<testcase classname="AllTests" name="testSkipToNewline"/>
+		<testcase classname="AllTests" name="testSkipToNewlineEmpty"/>
+		<testcase classname="AllTests" name="testSimpleSubtraction"/>
+		<testcase classname="AllTests" name="testSimpleMultiplication"/>
+		<testcase classname="AllTests" name="testSimpleDivision"/>
+		<testcase classname="AllTests" name="testSkipToNewlineAsManipulator"/>
+		<testcase classname="AllTests" name="testErrorResync"/>
+		<testcase classname="AllTests" name="testMultipleOperationsAndResults"/>
+		<testcase classname="AllTests" name="DivideByZEroDeliversNullOpt"/>
+	</testsuite>
+</testsuites>

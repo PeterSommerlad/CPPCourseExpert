@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ACCU SCC136</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">ACCU SCC136</h1>
+</header>
+<h1 id="accu-code-critique-136">ACCU Code Critique 136</h1>
+<h2 id="symptoms-and-observations">Symptoms and Observations</h2>
+<h3 id="div-error-message"><code>div</code> Error Message</h3>
+<p>This problem stems from the use of an unscoped enum that introduces
+the enumerators’ names in the surrounding scope. Because
+<code>div</code> is the name of a standard library function defined in
+header <code>&lt;cstdlib&gt;</code>, introducing div into the global
+scope via the enumerator causes error messages by the compiler due to
+name hiding.</p>
+<p>The use of the function name <code>apply</code> could also be seen as
+dangerous, but <code>std::apply</code> is a C++ library function (that I
+contributed based on Jonathen Wakely’s example), not also in the global
+namespace as happens with the functions from the C standard library,
+that are introduced both in the namespace <code>std</code> as well as
+into the global namespace.</p>
+<p>For an enumeration where the use of the enumerators is quite limited,
+it might be better to use either a scoped enumeration
+(<code>enum class</code>), or to define the enumeration in a non-global
+scope.</p>
+<h2 id="general-observation">General Observation</h2>
+<p>The code is definitely C++, but uses some C-ish style:</p>
+<ul>
+<li><p>epression.h: using <code>typedef</code> to introduce a type alias
+for an otherwise unnamed enumeration is a practice useful in C, but in
+C++ the name of an enumeration becomes a first class type, so there is
+no need to use a type alias. In C it is common practice to use typedef
+aliases for struct and enum types to avoid having to reuse the
+corresponding keyword for each use of the type. If type aliases are
+needed in C++, they should be declared with <code>using</code> alias
+instead of <code>typedef</code>, if only for the improved readability of
+the declaration.</p></li>
+<li><p>calculate.cpp: uses a C-style cast operator to convert the
+operation character to the enumeration. While C-style casts look
+convenient, they suffer from the ability to perform any of the C++-style
+casts. Here a <code>static_cast</code> would be more appropriate. In
+addition, none of the local variables is initialized. This is not a real
+problem in the current code, but can lead to problems after
+refactoring.</p></li>
+</ul>
+<p>The obvious bug are the missing case label specification and after
+being corrected the break statements (or returns) in expression.cpp for
+each case and also the non-error-handling in the <code>default:</code>
+case, that silently falls through. Since the author seems to know that
+<code>break;</code> exists from calculate.cpp, the author seems to be
+ignorant of the correct syntax of switch-case. Turning on warnings, my
+compiler shows ../expression.cpp:6:3: warning: label ‘add’ defined but
+not used [-Wunused-label] 6 | add: | ^~~</p>
+<p>for <code>add:</code>, <code>sub:</code>, <code>mult:</code>, and
+<code>div:</code> each. This is because the names are used to define
+<code>goto</code>-targets but not switch-case labels. A further
+observation, that shows something is shady, is that the function
+<code>apply()</code> uses the label <code>mult:</code>, whereas the
+enumeration uses the enumerator <code>mul</code>.</p>
+<h1 id="quick-fixes-for-the-obvious">Quick fixes for the obvious</h1>
+<p>Let’s start writing a few test cases:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> Adding1plus1Istwo<span class="op">(){</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="fl">2.</span><span class="op">,</span> apply<span class="op">(</span><span class="fl">1.</span><span class="op">,</span>hack<span class="op">::</span>add<span class="op">,</span><span class="fl">1.</span><span class="op">));</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> Subtracting4From6Is2<span class="op">(){</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="fl">2.</span><span class="op">,</span> apply<span class="op">(</span><span class="fl">6.</span><span class="op">,</span>hack<span class="op">::</span>sub<span class="op">,</span><span class="fl">4.</span><span class="op">));</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> Multiply2By3Is6<span class="op">(){</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="fl">6.</span><span class="op">,</span> apply<span class="op">(</span><span class="fl">2.</span><span class="op">,</span>hack<span class="op">::</span>mul<span class="op">,</span><span class="fl">3.</span><span class="op">));</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> Divide6By3Is2<span class="op">(){</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="fl">2.</span><span class="op">,</span> apply<span class="op">(</span><span class="fl">6.</span><span class="op">,</span>hack<span class="op">::</span>div<span class="op">,</span><span class="fl">3.</span><span class="op">));</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Note, that in general it is dangerous to use equality comparison for
+floating point numbers. However, the unit testing framework CUTE
+(https://cute-test.com), detects this situation with its
+<code>ASSERT_EQUAL()</code> macro and does a close match of the expected
+and actual value instead.</p>
+<p>With adding <code>case</code> and <code>break;</code> appropriately,
+we get the following:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> apply<span class="op">(</span><span class="dt">double</span> lhs<span class="op">,</span> operation oper<span class="op">,</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>             <span class="dt">double</span> rhs<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">switch</span> <span class="op">(</span>oper<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> add<span class="op">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    lhs <span class="op">+=</span> rhs<span class="op">;</span> <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> sub<span class="op">:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    lhs <span class="op">-=</span> rhs<span class="op">;</span> <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> mul<span class="op">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    lhs <span class="op">*=</span> rhs<span class="op">;</span> <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> div<span class="op">:</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    lhs <span class="op">/=</span> rhs<span class="op">;</span> <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">default</span><span class="op">:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> lhs<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>This solves the worst problems, but still has a lot of lacking.</p>
+<p>For example, the <code>main()</code> function contains significant
+(convoluted) logic that is untestable, because we cannot call
+<code>main()</code> easily from a C++ test and because it relies on
+global variables (<code>std::cin</code>, <code>std::cout</code>) which
+we cannot easily influence. So to test the given interaction we need to
+factor out the logic and parameterize the function using stream
+parameters. That way, we can formulate test cases that can employ
+<code>std::istringstream</code> for test input and
+<code>std::ostringstream</code> for collecting output in tests.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> interaction<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">,</span> <span class="bu">std::</span>ostream<span class="op"> &amp;</span>out<span class="op">);</span></span></code></pre></div>
+<p>The refactored <code>main()</code> function then looks like:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    interaction<span class="op">(</span><span class="bu">std::</span>cin<span class="op">,</span> <span class="bu">std::</span>cout<span class="op">);</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>No let’s start testing the interaction function:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testSimpleAddition<span class="op">(){</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot;1 + 2 =&quot;</span><span class="op">};</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>ostringstream<span class="op"> </span>output<span class="op">{};</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    interaction<span class="op">(</span>input<span class="op">,</span>output<span class="op">);</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="st">&quot;Result: 3</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>output<span class="op">.</span>str<span class="op">());</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h1 id="deeper-issues">Deeper Issues</h1>
+<h2 id="unscoped-enumeration">Unscoped Enumeration</h2>
+<p>Unscoped enumerations without a fixed underlying type, get one that
+the compiler selects. There was no guarantee that this type can
+represent values outside of the range of the provided enumerators,
+however, for practical reasons, one can assume that it isn’t a problem
+in the code. But there are situations were such an enumeration variable
+will be assumed to only have the values of the given enumerators, which
+is violated by passing an arbitrary non-whitespace character value cast
+to the enumeration type.</p>
+<p>Unscoped enumeration values silently convert to their underlying
+integer type. That can be either beneficial or mask problems in the
+code. Here, I doubt we will do any arithmetic or bit operations on the
+values of the <code>operation</code> enums, so there is actually no need
+to use an unscoped enumeration.</p>
+<p>While one could question the need for an enumeration at all, it is a
+common technique in parsers to have an enumeration for the individual
+tokens a language uses. Keeping that, the enumeration should be defined
+as a scoped enumeration (<code>enum class</code>) with an underlying
+type of <code>char</code>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">enum</span> <span class="kw">class</span> operation <span class="op">:</span> <span class="dt">char</span> <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  add <span class="op">=</span> <span class="ch">&#39;+&#39;</span><span class="op">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  sub <span class="op">=</span> <span class="ch">&#39;-&#39;</span><span class="op">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  mul <span class="op">=</span> <span class="ch">&#39;*&#39;</span><span class="op">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  div <span class="op">=</span> <span class="ch">&#39;/&#39;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="op">;</span></span></code></pre></div>
+<p>One might now argue that we now need to prefix each enumerator with
+its type name, such as <code>operation::add</code> making the switch
+statement cases very wordy. Fortunately, C++20 introduced
+<code>using enum</code> declaration for importing enumerators of an
+enumeration in the current scope. This leads to the following still
+simple code:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> apply<span class="op">(</span><span class="dt">double</span> lhs<span class="op">,</span> operation oper<span class="op">,</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>             <span class="dt">double</span> rhs<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">using</span> <span class="kw">enum</span> operation<span class="op">;</span> <span class="co">// C++20</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">switch</span> <span class="op">(</span>oper<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> add<span class="op">:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    lhs <span class="op">+=</span> rhs<span class="op">;</span> <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> sub<span class="op">:</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    lhs <span class="op">-=</span> rhs<span class="op">;</span> <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> mul<span class="op">:</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    lhs <span class="op">*=</span> rhs<span class="op">;</span> <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> div<span class="op">:</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    lhs <span class="op">/=</span> rhs<span class="op">;</span> <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">default</span><span class="op">:;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> lhs<span class="op">;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="convoluted-parsing-logic-without-error-handling">Convoluted
+Parsing Logic without Error handling</h2>
+<p>Nested loops with internal breaks are always confusing. But to
+clarify, it is important to get a mental model on what to actually want
+to achieve. I believe the “railroad diagram” of the expected input looks
+like</p>
+<figure>
+<img src="data:image/png;base64,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" title="railroad diagram" alt="Input Syntax" />
+<figcaption aria-hidden="true">Input Syntax</figcaption>
+</figure>
+<p>With that in mind, we can refactor the nested loop structure. Missing
+in the above diagram is the “restart” of the diagram, whenever an equal
+sign forces the output of the result. With that in mind, we could
+actually treat the ‘=’ as an additional operation symbol and simplify
+the diagram and loop:</p>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgYAAAFWCAYAAAASWVXKAAAMbGlDQ1BJQ0MgUHJvZmlsZQAASImVVwdYU8kWnluSkJDQAghICb0JIjWAlBBa6L3ZCEkgocSYEFTsZVHBtYsoVnQVRMGyAmLHriyKvS8WVJR1URcbKm9CArruK9873zf3/jlz5j/lzuTeA4DmB65Eko9qAVAgLpQmhAUx0tIzGKSnAANagAJGAoTLk0lYcXFRAMrg/e/y7gZAFPerTgquf87/V9HhC2Q8AJCxEGfxZbwCiI8DgK/nSaSFABAVesvJhRIFng2xrhQGCPEqBc5R4moFzlLiwwM2SQlsiC8DoEblcqU5AGjcg3pGES8H8mh8hthFzBeJAdAcAbE/T8jlQ6yIfURBwUQFroDYDtpLIIbxAGbWd5w5f+PPGuLncnOGsDKvAVELFskk+dyp/2dp/rcU5MsHfdjAQRVKwxMU+cMa3sqbGKnAVIi7xVkxsYpaQ/xBxFfWHQCUIpSHJyvtUWOejA3rB/QhduFzgyMhNoY4VJwfE6XSZ2WLQjkQw92CThEVcpIgNoB4oUAWkqiy2SydmKDyhTZkS9kslf4cVzrgV+HrgTwvmaXifyMUcFT8mEaxMCkVYgrEVkWilBiINSB2luUlRqpsRhcL2TGDNlJ5giJ+K4gTBOKwICU/VpQtDU1Q2ZcWyAbzxTYLRZwYFd5XKEwKV9YHO8XjDsQPc8EuC8Ss5EEegSwtajAXviA4RJk79lwgTk5U8XyQFAYlKNfiFEl+nMoetxDkhyn0FhC7y4oSVWvxlEK4OZX8eLakMC5JGSdenMuNiFPGgy8DUYANggEDyOHIAhNBLhC1dTd2w1/KmVDABVKQAwTASaUZXJE6MCOG10RQDP6ASABkQ+uCBmYFoAjqvwxplVcnkD0wWzSwIg88hbgARIJ8+Fs+sEo85C0FPIEa0T+8c+HgwXjz4VDM/3v9oPabhgU1USqNfNAjQ3PQkhhCDCaGE0OJ9rgR7o/74lHwGgiHK87EvQfz+GZPeEpoJzwiXCd0EG5PEM2V/hBlNOiA/KGqWmR9XwvcBnJ64EG4H2SHzLg+bgSccHfoh4UHQM8eUMtWxa2oCuMH7r9l8N3TUNmRXcgoeRg5kGz340oNBw2PIRZFrb+vjzLWrKF6s4dmfvTP/q76fHiP/NESW4jtx85iJ7Dz2GGsETCwY1gT1oodUeCh3fVkYHcNeksYiCcP8oj+4W/wySoqKXOpdely+aycKxRMKVQcPPZEyVSpKEdYyGDBt4OAwRHznEcwXF1cXQFQvGuUf19v4wfeIYh+6zfdvN8B8DvW399/6Jsu4hgAe73g8T/4TWfHBEBbHYBzB3lyaZFShysuBPgvoQlPmiEwBZbADubjCjyBLwgEISACxIIkkA7Gw+iFcJ9LwWQwHcwBJaAMLAOrwTqwCWwF1WA32AcawWFwApwBF8FlcB3chbunE7wEPeAd6EMQhITQEDpiiJgh1ogj4oowEX8kBIlCEpB0JBPJQcSIHJmOzEPKkBXIOmQLUoPsRQ4iJ5DzSDtyG3mIdCFvkE8ohlJRXdQEtUFHokyUhUaiSeg4NAedhBaj89ElaAVahe5CG9AT6EX0OtqBvkR7MYCpY/qYOeaEMTE2FotlYNmYFJuJlWLlWBVWhzXD53wV68C6sY84EafjDNwJ7uBwPBnn4ZPwmfhifB1ejTfgp/Cr+EO8B/9KoBGMCY4EHwKHkEbIIUwmlBDKCdsJBwin4VnqJLwjEon6RFuiFzyL6cRc4jTiYuIGYj3xOLGd+JjYSyKRDEmOJD9SLIlLKiSVkNaSdpGOka6QOkkf1NTVzNRc1ULVMtTEanPVytV2qh1Vu6L2TK2PrEW2JvuQY8l88lTyUvI2cjP5ErmT3EfRpthS/ChJlFzKHEoFpY5ymnKP8lZdXd1C3Vs9Xl2kPlu9Qn2P+jn1h+ofqTpUByqbOpYqpy6h7qAep96mvqXRaDa0QFoGrZC2hFZDO0l7QPugQddw1uBo8DVmaVRqNGhc0XilSda01mRpjtcs1izX3K95SbNbi6xlo8XW4mrN1KrUOqh1U6tXm649SjtWu0B7sfZO7fPaz3VIOjY6ITp8nfk6W3VO6jymY3RLOpvOo8+jb6OfpnfqEnVtdTm6ubplurt123R79HT03PVS9KboVeod0evQx/Rt9Dn6+fpL9ffp39D/NMxkGGuYYNiiYXXDrgx7bzDcINBAYFBqUG9w3eCTIcMwxDDPcLlho+F9I9zIwSjeaLLRRqPTRt3DdYf7DucNLx2+b/gdY9TYwTjBeJrxVuNW414TU5MwE4nJWpOTJt2m+qaBprmmq0yPmnaZ0c38zURmq8yOmb1g6DFYjHxGBeMUo8fc2DzcXG6+xbzNvM/C1iLZYq5FvcV9S4ol0zLbcpVli2WPlZlVtNV0q1qrO9Zka6a10HqN9Vnr9za2Nqk2C2wabZ7bGthybItta23v2dHsAuwm2VXZXbMn2jPt8+w32F92QB08HIQOlQ6XHFFHT0eR4wbH9hGEEd4jxCOqRtx0ojqxnIqcap0eOus7RznPdW50fjXSamTGyOUjz4786uLhku+yzeXuKJ1REaPmjmoe9cbVwZXnWul6zY3mFuo2y63J7bW7o7vAfaP7LQ+6R7THAo8Wjy+eXp5SzzrPLi8rr0yv9V43mbrMOOZi5jlvgneQ9yzvw94ffTx9Cn32+fzp6+Sb57vT9/lo29GC0dtGP/az8OP6bfHr8Gf4Z/pv9u8IMA/gBlQFPAq0DOQHbg98xrJn5bJ2sV4FuQRJgw4EvWf7sGewjwdjwWHBpcFtITohySHrQh6EWoTmhNaG9oR5hE0LOx5OCI8MXx5+k2PC4XFqOD0RXhEzIk5FUiMTI9dFPopyiJJGNUej0RHRK6PvxVjHiGMaY0EsJ3Zl7P0427hJcYfiifFx8ZXxTxNGJUxPOJtIT5yQuDPxXVJQ0tKku8l2yfLklhTNlLEpNSnvU4NTV6R2pI1Mm5F2Md0oXZTelEHKSMnYntE7JmTM6jGdYz3Gloy9Mc523JRx58cbjc8ff2SC5gTuhP2ZhMzUzJ2Zn7mx3CpubxYna31WD4/NW8N7yQ/kr+J3CfwEKwTPsv2yV2Q/z/HLWZnTJQwQlgu7RWzROtHr3PDcTbnv82LzduT156fm1xeoFWQWHBTriPPEpyaaTpwysV3iKCmRdEzymbR6Uo80UrpdhsjGyZoKdeFHfavcTv6T/GGRf1Fl0YfJKZP3T9GeIp7SOtVh6qKpz4pDi3+Zhk/jTWuZbj59zvSHM1gztsxEZmbNbJllOWv+rM7ZYbOr51Dm5M35ba7L3BVz/5qXOq95vsn82fMf/xT2U22JRom05OYC3wWbFuILRQvbFrktWrvoaym/9EKZS1l52efFvMUXfh71c8XP/Uuyl7Qt9Vy6cRlxmXjZjeUBy6tXaK8oXvF4ZfTKhlWMVaWr/lo9YfX5cvfyTWsoa+RrOiqiKprWWq1dtvbzOuG665VBlfXrjdcvWv9+A3/DlY2BG+s2mWwq2/Rps2jzrS1hWxqqbKrKtxK3Fm19ui1l29lfmL/UbDfaXrb9yw7xjo7qhOpTNV41NTuNdy6tRWvltV27xu66vDt4d1OdU92Wev36sj1gj3zPi72Ze2/si9zXsp+5v+5X61/XH6AfKG1AGqY29DQKGzua0pvaD0YcbGn2bT5wyPnQjsPmhyuP6B1ZepRydP7R/mPFx3qPS453n8g58bhlQsvdk2knr52KP9V2OvL0uTOhZ06eZZ09ds7v3OHzPucPXmBeaLzoebGh1aP1wG8evx1o82xruOR1qemy9+Xm9tHtR68EXDlxNfjqmWucaxevx1xvv5F849bNsTc7bvFvPb+df/v1naI7fXdn3yPcK72vdb/8gfGDqt/tf6/v8Ow48jD4YeujxEd3H/Mev3wie/K5c/5T2tPyZ2bPap67Pj/cFdp1+cWYF50vJS/7ukv+0P5j/Su7V7/+Gfhna09aT+dr6ev+N4vfGr7d8Zf7Xy29cb0P3hW863tf+sHwQ/VH5sezn1I/Peub/Jn0ueKL/Zfmr5Ff7/UX9PdLuFLuwKcABgeanQ3Amx0A0NIBoMO+jTJG2QsOCKLsXwcQ+E9Y2S8OiCcAdfD7Pb4bft3cBGDPNth+QX5N2KvG0QBI8gaom9vQUIks281VyUWFfQrhQX//W9izkVYC8GVZf39fVX//l60wWNg7Hhcre1CFEGHPsDnmS1ZBFvg3ouxPv8vxxztQROAOfrz/C9H9kNuw1+o1AAAAlmVYSWZNTQAqAAAACAAFARIAAwAAAAEAAQAAARoABQAAAAEAAABKARsABQAAAAEAAABSASgAAwAAAAEAAgAAh2kABAAAAAEAAABaAAAAAAAAAJAAAAABAAAAkAAAAAEAA5KGAAcAAAASAAAAhKACAAQAAAABAAACBqADAAQAAAABAAABVgAAAABBU0NJSQAAAFNjcmVlbnNob3Q+SV3LAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC12lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+NTE4PC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6VXNlckNvbW1lbnQ+U2NyZWVuc2hvdDwvZXhpZjpVc2VyQ29tbWVudD4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjM0MjwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjE0NDwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6WFJlc29sdXRpb24+MTQ0PC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4K5qLj0wAAQABJREFUeAHtnQl8FEX2xx+IukpIoiIIBIKrK4IkIhLUlXDlL1cCkUOBgK5yyKWIrpyuB7gqqOsJhCy4KpJwKGcSvEgCCSAQUEg4xBWXM5xCIAnuIfDvNzpJZ6aqZ6anZ6an51efD0z3q+u9b81k3lS/qqpRca70EiGBAAiAAAiAAAiAgEKgJiiAAAiAAAiAAAiAgJ0AHAM7CbyCAAiAAAiAAAhgxgDvARAAARAAARAAgSoCmDGoYoErEAABEAABEAh5AnAMQv4tAAAgAAIgAAIgUEUAjkEVC1yBAAiAAAiAQMgTgGMQ8m8BAAABEAABEACBKgJwDKpY4AoEQAAEQAAEQp4AHIOQfwsAAAiAAAiAAAhUEYBjUMUCVyAAAiAAAiAQ8gTgGIT8WwAAQAAEQAAEQKCKAByDKha4AgEQAAEQAIGQJwDHIOTfAgAAAiAAAiAAAlUE4BhUscAVCIAACIAACIQ8ATgGIf8WAAAQAAEQAAEQqCIAx6CKBa5AAARAAARAIOQJwDEI+bcAAIAACIAACIBAFYFaVZe4CgUCtcMjQ8FM2GgwgYpzpQa3aJ3msrJXU1FxMRUUFNiMKj17loqKig0xMDY2hiIjImxtxcfHU2xMDCUl9jCkbTQCAjICNZQP/CVZJuTWIwDHwHpj6g+L4BhUUeYv/vSMDMURWE+ZWdlVGX686pmUSPHx7WhQSkql4+DH7tGVxQnAMbD4ADuaB8fAkQju3SEAx+BXSukZC2n8xEl0VnEOzJAilNmE12dMVxyEgWZQBzpYhABiDCwykDADBEDAdwR4ZqBFy1h6bOQo0zgFbC07KKwT6xao2QvfUUfLgSIAxyBQ5NEvCIBAUBCYOGkKDUgZRAcOHjStvqwb68i6IoGAtwR8/ihBNnWtd2rS6Pa8BRhs9WX8gs0O6OtfAno/r/7V0tjeOJZgoPJlm6/EEgRT4viDOamzEXtgwkGT/f3V+/kyuj07MqxKsJMI8dfdF7eHOAGYzwRa1GwFEAqBHcqqgpGjR7u1uqBORBglJHemuI5tKKppQwqLDKPmrW41hOOe7d9ReWk5Hd5fQoVrt1LOylwqO1uu2TY/UjhwMIkWZaRTdJMmmmWRCQIiApgxEFGxsEzmYcIxsPCge2CazDHQ+4vGg65NU5RnCronJrl0CuI6tKHHXxhpcwj8qTw7CDOnzqHCdVs1u+Wljp9lZ2HmQJOSfzNlf3/1fr6Mbs9OAzEGdhJ4BQEQAAGFAD8+0NqHoGF0A3pv2Vv0Ud48vzsFPEA8M8F9sw6siyyxDSNHjZZlQw4CUgJwDKRokAECIBBqBEYoX6RaMQWdkzvS8m+XUML9nQKOhnVgXVgnWeLHChOU5ZVIIOAJATgGntBCWRAAAcsS4C/RBekZUvseGjuIZi5/m+pE1pGW8XcG68I6sW6yNCt1DpYyyuBALiSA4EMhFghDlcD58vP03vOz6ZJqP9ChEx6h6xvUDVUkIWP3xEmTpbbyF+/kt8dL8wOdYdft43fThaqwbbxaAQkE3CEAx8AdSigTMgQqys7TR28vqGZv70d7wTGoRsR6NzxTINungKfq7V+8ZracdTxy4AjlrlzrpCbbxjYOHpTilAcBCDgSwKMERyK4BwEQCCkCvAphgmS2gIP7Xv3gpaDhwbrKAhLZRrYVCQRcEYBj4IoQ8kEABCxNgH9Jy84+mPzWBFPFFLgaCI45YJ1FiW3MUuIokEDAFQE4Bq4IIR8EQMDSBOzHJTsayfsUmGH1gaNeru5ZZ9ZdlDKzskRiyECgGgE4BtVw4AYEQCCUCPDUelb2aqHJvHlRsKaHnxSvUpDZGqx2Qm/fEEDwoW+4hlyr+3b/SPPfroqIrnV5LXr2vYm0cn4W5a8uoC8+/YpuiKpPt98dS0+9Mpaa3NzYidGi1E9oz7ffVcrvTmhL3ft3rbz/duN2WvFhZuV9xLXh9PT0JyvvP3jjI9r//UHbfY8BXZWd4bbRqvRs+llZadBrcBKN/esY27ay/1DKbcrdQje3uInu/1NPGjL+kco2ZBdFW4pp+QeraM3yHPr3z/+hexLuog6J7anv0PtlVWzyU8d/oiVpn9J32/fSzq276Njh49Qs9hbbvzvjWxMHNtaqJf8YfrP+WxtDeyfX1I2kca88QdsKvqF12QW0cc0m2v3NHhvbth3jaPDYgdSyzW324nh1QaBAcg4Cb3PMGwkFa+JZA7ZBtH0yL8vECoVgHVn/6C3/i+Sf/tGLRQgcPXiUPpm3tJo1TW6Oohl//luljL8UjykOwvovNtKCgg9sX46VmcpFwefrKS9zXaXoit9dUc0x4C99dR/X1bu2mmOwZmUefbvh1zMf1OW4wQ/enE//3PWDrW97Bz/s3kdvTOR16eH0wPA+drHTa9HmnfTCiGnV5GtW5BL/2/71Dnoh9VliR8gx8Rf3MymTqKKsolrW3qLvif+tWpBFyz5YQa/8YxrdeGvTamXsNz8oDpfaFptzdU8sjUmucoi4LLPl9liPv74Px8DOz9Wr7DECn30Q7IltWDF/lZMZRcXFcAycqECgJuD810ydi2sQ8IKA2ilQN8NflGkvz6M3F7+mFvv8mh0SUfpq2RpNx8DRKVC3sfQfy22zH8MnDVGLafWiz21OQTWh4GbHpiJ68K5B9NWP2RR5XaSgRHUROwCOTkH1ErjzhAB/SYqSEbMFX366hv4+/X1R8y5lz82cbJtdc1lQowDbIHIMbM7QZOyGqIEu5LPgGIT8W8C3AGLiWtKFCxds093qnj7/5Evll+2LdHXY1Wqxodf3P9yL/vX9fuIvX3V69OmHacncpZW/5NlhYB0vu+wydTGna7blzE+ldPjHw9Xy5iv7Hjzy9EN0+RWX2+Q/V/xMr45zdnr+NG4w1b3hOtq1bQ+x/fbEjtKsqWn07LsT7SK3X/lxyFW1r6Liwp1u10FB1wT4lERv06njp5ze9+62ee7MOXeLSssZYYO0cWRYmgAcA0sPb2CN69SzA7277E3bF276zIX08tgZ1RQ6fuQE3disaTWZUTe169Smlz+YSnxsbb87B1Y2O2DkgzT+jaepdnhtmvliaqX85/KfKUx5JitL73z6N7qvTwJdvHiRnhs6lZZ/tLKy6E8nTtParHxbPgt5gySWqdPy7UuqPTpp2aaF7TGGvQzz4R0W+VGBO2nks8OJZynYKeD0yy+/2OIvTpSccKc6yvxG4ODBQ0IWDQ1wDIQN+1HIxz+L0tlz3jsdonYhsw6BgDkGsuMi9aI1uj29eqBeFYFuD3Sp/BXeVbl2dAzOnDzjM8egQeMbqEaNGsqOhddXKaRc1Wv4672jvEIJUJQ5Bh0S4yu/9GvWrEkT/vZ0NceAO9i350e6jxJsfW348mvbq/2/dl3/WM0pYHmPgd2rOQYs4wBOdxyDMc+PpDEvVo+Y5wDGfsN6czM+SaH2+WpkgGPQ+PdRmgccaQ3UdcrMkrepeatbhU3wqYuhNp5CECYSmm08AuYYmGhMoIqPCPAKBHuKvC7Cfln5+vP5f1deG31h/yV95ZVXVGv6SiWgkdMVDnI+I0GWuvS9r1pWxLURFN/9Xir4bEOl/MSRk5XXvAJBnXilxYTBUypFFy9eqLxWXxzaV/0RhTpPff3AY33Vt7g2KYH47u2U90k7k2oHtUBATgCOgZwNcrwk0PimqMoWtJbkVRYK4MV///Nfae8NGjtP7zeKblSt/NFDR2335WfLK2MX7AX4sUJWhnitvL0Mvx784dellmqZ6No+6yHKgwwEQAAEvCUAx8BbgqgvJcBT+VZIV151pZMZNS+rWU32H2VvA07lDksTqxVyccP7I7hKHDuBFBwEeA+KL5fm6FK2/4h+0iWsuhpEJRDwgAAcAw9goah/CVxSn32sdH3mZPWAPn9pc+ZkqVNXjlHj9RrWs5URHc/Mj1R49YCr1EbZ8MhV4k1rkIKDwHc79tL8dxboUvbeLnfDMdBFDpWMIADHwAiKaMMQAo6bBPG0vDp9o+x8GIjEmxjx0bv2xCsTtuZvs9/aXu1Bg7zkkZ0A3jzJnnoNTqSBo/vbb/EKAiAAAqYmEDDHoOKc868wd0jJojf1tudOn0aUOXT4MCUm9aJ9P/7osrm6detSUmIPSuzRg6Kioujaa6+h666rS1f9znlK22VjDgVk/ByKBeT22uuvrdZv0Zaqtfm8HG9zbmG1fH/dLExdYltKyEGHnPJXr7ftNKjuv0GTBpW3N99W3TGYO/0f1FNxDsLCxb/2ebvlVR9n01/eM++mM0Z8vg4fOUJr166j4uKdtH3HdtpSuJX++195bEcl0N8u5v09jQYOMNbBan5bDB085Lxk8cj+EvJ2ZcLlV1QPfHW0R+ve0UnWKivL46W6ohQT05I2bVgvytIt+2j+xzT68Sfcrn+FwqZtXBtqfccddNttt1HHjh1sf+N++ukU/fTTaTqivFf4wCc+2+H0adczhX/4wx8oe9VKatTI+/0n3DZCR0HZ31+9ny9ZezpUq1YlYI5BNS0sflNx/jzd36efS6eg3b1/pMkTJ9o+JBZHIjSvftSv0/H2zP3K5kS8y1/yQz3psyVfOAX12cv5+pU3IBraZSQ9NmmobYOjqaP+6tRlp14dKmV/empwtQ2MeLfCPq0H0Ki/PEbNbv8D8R/Fk0dP0oF/HqLMjOzKbZzN7BhUGufFRVSjRjR4UIpTC737PkBffvWVk9xRMOyxEXT77bdTi+biZXiO5d25j45uInQMSgxwDHibba2ttt3Rz5sy5aXVZ9zsbUVGOK8Qsufped37/fduOwXdu3WjT5csknbD7xH+d3tsDPXo3o1SZxHl5uXRtJdepsKtW6X1/vnPf1Kv3n1oXV4OhdVGHI4UlJsZcAzcBOVNscEP/Ym++07svXO7t93Wgl59+a+U0Dn492f3htOd997hVJ3PTlCfn+BUwE8CPqho3IPPCHtLSulRuT8CF+CYggeH91N2V/y0sjzvlvjskOcr73FRRWD50k9sNz169qJ16/KrMgRXd93zRyordf0LUlDVI9FhxTGI86iG+QqzDf5Ibdre7bKb/0tIoJXLl7osJyrQuVMn4n9ffPklPfvc87Rnj/hvKf+N/dMjQ2jpJ4tFzUDmAYHqodUeVERR9whMnDRF89cQe9DrFI841J0Cpsl7u/O2w7L0x/tc/wGS1fVGzic1yhIf5DTqucecsp969QninR+R3CewOnMVFW3/hngTKVni+I56Nxg3XRwbEyPsqnCt/NepsIIJhTIb4uPjDdP2+voNbLuByhrksdy7Z5dup0DdbtcuXSh/bR7x30xZ+vyLL2jKs3+RZUPuJgH5J9DNBlBMTmD9+g00c/ZsaYFxY5+gTxYvNCR2QNqJnzIuq3WZxz1d5rDkjxt4b/lbdMe9raq1xUv0eLc/PjpZK6m/UOzLCdUyrmvX07Fv+zkJ9nrqfh6bPIz4fAXHxMcnL9q0QLh7I8cjzFr5Dr279E2KUnbA00pd+91Hr338irCIXV9hpgWFN/3+93TuzE909VW/bvUsMpEfzQ0dPkKU5bFM9iWZuyrP47bMVkFmg8wZ8lT/QQ89TOd//llarfbVV9vGkh8NGJX4fcF/M8c+Pkba5DvvzaRNmzdL85HhmkANJejhkuti+kvIgiOMDrbQ255+y7Rr8lK7NnfdI32E8Pjo0TRjuvjLQLtl73Jl47H7YmAi/kXW8IFGB384ZNsi+Np611Bs2xjhscaiur6U8SZIRZuLbWfc33Zni2qPD1z1yzsrHtx3iHh3Q35v1K1/HV1z/TXUMLoBXWlAUKmr/t3Nb1GzulNmrxeIz1fd+jfQzz//266C06sROpWePUuNGkc7tc2Cj3Ln2WaxhJkmF+asyKMn+jwl1NIIbvweDou4Rtg+C/kL/OTxo9J8IzImTJxEs1LnCJtq1ep22pBfdYS7sFAAhLK/v3rHxOj27EjgGNhJGPw6/+MFNGrM48JW+XkZP29z/DUrLGywUPZGMpNjYLDJaM4DAmZyDP73v//RNXXr2RwpkQnNmjWjbwq9/2XYf2CKLfrdsY+2yqOtDxXnIBjTI52H0RbB4xBe7bR4YYbXJt1+x530w76qJbnqBnljszOnTtDll/962qg6z8hrfqyU2CuZ8vMLhM3OTZtDKQMHCPMCJZT9/TWbY4BHCT54h/D02nMvvChsmf+YLVqYHhCnQKgQhCBgUgL8xVKwbq1Uu7179xIvgfQ2yR4n8Bcr//IOtsQ6i5wCtqNnkvbjOHds5SXXMqeA629TnDVfOwXcD/+wYifn5ptv5lun9MLUqfTzv13vJupUEQKCY+CDN8HSpcvo1KlTwpb/MW8u8bM3JBAAAdcE7lCmhAf0l+9dkNzb+wOleAlleHi4UJnpT7+urIIoE+aZUci6ss6ixDYmJSWKsjyS9en3oLT8qBEjqNktt0jzjc4Ir1OH0nhNoyCVlBylFStWCHIgckUAjoErQjrys7KzhbV4yU6r22OFeRCCAAiICbw/N812hLYol9eve5t4Xf/rM6YLm+GNjqYE0TJT1pV1FiW20Yg9DH6UbNLGjxDeeH2GqGufyu6+6y7q0KG9sA/Z32JhYQgrCcAxqERhzMV/lJ3ccnJzhY0NHzZUKIcQBEBAm8AdrcRBkRyoelIyO6fdYvVcnjVo0rhxdeFvdzw1/+o48a9wYYUACVlH2aMPtk20uZSnqjJrfrYvSvwFHag0fKj4b+uXX35F/DcZyTMCcAw84+WydE5OrjCS+qqrfkf33fd/LuujAAiAgDOBj+d/6Cz8TfLIEPGXgrSCJOM1yawBF//43XSa/tQbkpqBF7NurKMsadkmqyOSD1aWKMrSwowFsiyfy7t160r8N9YxcbzXunXmW53gqKfZ7uEYGDwi2775Rthij+7d6Uov9k4XNgohCIQIgabR0dKA3e3bdxhCoafy/H3MqJHStvikRF4CaKaYA9aFddI6xZFtYtuMSEXKOReixPuAXK+c8RKodNXvlB9e/yf+4bV1m/hvcqB0DYZ+4RgYPEp8+Ico9erZUySGDARAwE0Ct97aTFjyvLLhkVGJf1nzkj5Z4qn6Pq37S6fsZfV8IXdHF7bFqNkCtuFnyYZGvK17oNP9yb2EKsj+JgsLQ2gjAMfA4DfCkSPiwB+OrkYCARDQT0DmXPN+B0amtDmpxCcQyhIH9/GvdN4rIHflWlkxn8m5T+6bdZAFGnLnbAPbYmTiU05F6cF+/URiv8piY8V/Y2V/k/2qXJB1VivI9DW9ukdKxI5BuMEnmpkeBBQEAYMJyGYMeBc+IxNH7qelptKIUaNsR0TL2ua9AvhfeGQdSkjubNslsVHTBsqOgGHUvNWtsmoeyfno5PKz5YoDcJT47IOclbl0zo3lk+wU8Bp/I1YhqBWWsTbDjIHM1iMl4llctV24rk4AOx9W5+H1HR8qIto/nE+EC8ROh44GyXbeciyHexBQE9C7M5u6DW+veWOd2Fathc34Qj/eLnmAsitigXLmSTAlfnzAMwWyL0pvbJH9/Sj96aRfNjXS0p3/7vLfX8cUoTh6JYcOOIoDci/jp/f9a3R7dig+dwzsHYXKq68Gyih+Mv2Mah/tWJOA3j9cRtOQvX99qZ/WnvxG2+dtexxoaGRMgaM+geDvqIPWvdn109LdTHmIMTDTaEAXEAAB0xHgL9pFGenSfQ7MoDDvU8A6+tIpMIOd0ME/BOAY+IczegEBEAhiArzcb8+uYiX2YLZ0++RAmMfbHLNOrJtRSxIDYQf6NBcBOAbmGg9oAwIgYGICvHug3UHQWtboaxNscQS/OQRG7Gjoa33RfnARQIyBweNl9mdcMv0MxoDmLEbAl8/wPUEle/8GUr/MrGwqKi6mgoJfj//loMViyUZAntjKZXl1gT2IkE+BjI2JCejMgBn5q5maXT+1rma+hmNg8OjgjWkwUDQHAioC+HypYATg0uz8za5fAIZMV5d4lKALGyqBAAiAAAiAgDUJwDGw5rjCKhAAARAAARDQRQCOgS5sqAQCIAACIAAC1iQAx8Ca4wqrQAAEQAAEQEAXATgGurChEgiAAAiAAAhYkwAcA2uOK6wCARAAARAAAV0E4BjowoZKIAACIAACIGBNAnAMrDmusAoEQAAEQAAEdBGAY6ALGyqBAAiAAAiAgDUJ1LKmWbAKBEAABPxDICt7tdOWyEVFxYZ0Hhsb47QlciDPaDDEKDRiegJwDEw/RFAQBEDATAT4LIT0jAzlbIT1xOck+DKpHYx8pT974pMU4+Pb0aCUlErHwZ6HVxDwlgDOSvCWoEN97NXtAAS3IGAggUB/vtIzFtL4iZPorOIcmCFFRETQ6zOmKw7CQL+oE2j+row0u36u9DdLPmIMzDIS0AMEQMC0BHhmoEXLWHps5CjTOAUMix0U1ol18/XshWkHB4oZTgCOgeFI0SAIgICVCEycNIUGpAyiAwcPmtYs1o11ZF2RQMBbAnAMvCWI+iAAAgEnUHH+vOE6cCxB98Qkmjl7tuFt+6pB1pUdBNbd6OQLxkbriPaMIYDgQ2M4ohUQAIEAEjh58iTVjo42TIMdyqqCkaNHkzr4T9Z4nYgwSkjuTHEd21BU04YUFhlGzVvdKivukXzP9u+ovLScDu8vocK1WylnZS6VnS3XbIMfKRw4mESLMtIpukkTzbKeZB4/ftyT4igbxAQQfGjw4CH4xWCgaA4EVARkn6+8nK+obVycqqT+S/tMgSunIK5DG3r8hZE2h0B/b57XZAdh5tQ5VLhuq2ZlXur4WXaWYasWNm3eTAn3dRX2WXGuVCj3t1D2/jCLfv7mobc/PErQSw71QAAETENg585dhukyUJmK13IKGkY3oPeWvUUf5c3zu1PARvLMBPfNOrAussQ2jBw1WpbtsVyLiceNoYKpCcAxMPXwQDkQAAF3CKzJyXGnmMsyI5QvUvV+AY4VOid3pOXfLqGE+zs5Zvn9nnVgXVgnWeLHChOU5ZVGpJzcXCOaQRtBQACOQRAMElQEARDQJrBmTQ5dunRJu5CLXP4SXZCeIS310NhBNHP521Qnso60jL8zWBfWiXWTpVmpc7xeynjhwgXKy1sr6wJyixGAY2CxAYU5IBCKBDhifvOWLV6ZPnHSZGl9/uKd/PZ4aX6gM1g3LedAyzZ3dN+0eQthVYI7pKxRBo6BNcYRVoBAyBOYrfwy1pt4pkC2TwFP1ZvZKbDbzDrKHiuwbVqzIfY2ZK+zgmjJpswGyN0ngFUJ7rNyqySiYt3ChEIgoIuA7PNlb2zNl1/QPXffZb9165VXIfDOgaJtjjm4j5/jm+nxgZZRZaVl1PuOB6nkwFGnYrx98u6dRR6vUsjPL6DuST2d2lMLzBL1L3t/mEU/NTMzX2PGwMyjA91AAAQ8IvDokKF0+swZj+rwL2mRU8CNTH5rQtA4BawvOzCssyixjVlKHIUn6eSpU/TosOGeVEFZCxCAY2CBQYQJIAACvxI4dPgw8XJDDpZzNxUUFAiL8j4FZlh9IFROQ8g6s+6ilJmVJRILZcyw3wP96dixY8J8CK1LAI6BdccWloFASBJYv2Gj22cG8GOErOzVQk68eZEv0pyX59K00a/Y/n06b7kvuqCHnxSvUpDZKlLiz+Mn0NZt20RZkFmcABwDiw8wzAOBUCSQmpZmW79/8eJFTfMLCtYL83mbY95IyBdp1cfZtGjOEtu//NXi2Qpv++VZA7ZBlFydwsgzBc+Mn0hz570vqg5ZCBCAYxACgwwTQSAUCfD6/V69+9C5sjKp+bLHCHz2QbAnmQ1FxcVS05hVYs9exI4VUugSgGMQumMPy0HA8gR4U54749rSosWLhRsgyb4kfTVb4E/gMhtEzhBvDsVBmK3bxFHB+g3+VBN9mZAAHAMTDgpUAgEQ8IzAzTfdJK1QUnKUhg4fQfEdOtG6dfnScuoMPiUx2JO7NuTm5dG97TsQbwd99Kg80LBZs2bBjgT6u0kAxy67CQrFQAAEzEsgK3MlJffuS3v37pUq+e327dRDmSavW7cu9ejejXomJdEP+/YJyze0gGPAxz+L0rHjJ2j1Z58r2yRn2QIvT58+LSpWTcZOQeaK5XRL8xbV5LixJgFscGTwuGKDDYOBojkQUBHQ+nyVV1TQAGWpohF7+u++uF3Vq77Ld5+bRbu+2e1UueCzqqn62nVqU+t2rZzKdOlzH/Uder+T3FNBi5rObXvaRtcuXWj+Rx9QWO3apMXf03Z9Ud7s+vnCZl+0iRkDX1BFmyAAAn4nwF9cq5Yvo+deeJHefuddv/fv2GHRlmLa+NUmR3G1+4qyClI7CvbM3ze70X4Z0NdxT46lv06bSjVq1AioHujcvwQQY+Bf3ugNBEDAhwRq1qxJL780jXhr5BYtmvuwJ2s3HRsbY2PILOEUWHusRdZhxkBEBTIQAIGgJsDnJWz5eiMtXrKEXpg6jQ4fPuJ3e5rc1IR+Ou78/H5v0ffVdGkWe0u1e765oXF9J5k/BI2joujFF56j/g8+CIfAH8BN2gdiDAweGDzjMhgomgMBFQE9n69ffvmF8pVtj1dlcrBdtmbkvb0rI2IM7G05vva49X7a//1+m/j/7u9M7y5707GIYffuxBg0bNiAkhITlWDMRGofH0+1asl/L+rhb5gxbjRkdv3cMMEUReTvAFOoByVAAARAwDsC/EXXuVMn27+33/wbbSkspJycXNp/4IBXRxF7p1Vgaw8elEI3Nm1KCQmdKa6Nb3Z4DKyF6N0bAnAMvKGHuiAAAkFHoG1cHPE/Tnyk8MFDh5xsOLK/hBoF+ZLFPdu/c7KLBTExLSktdbYwD0IQYAIIPsT7AARAIGQJREc3EdpeojgGwZ7KS8uFJkRGRAjlEIKAnQAcAzsJvIIACIDAbwQOW8AxsIINeEMGhgAcg8BwR68gAAImIBAbEyPUonDtVqHcCOE9CXdRfPd7bf9ua+O7nQRlNsQrAYZIIKBFADEGWnSQBwIgYGkC/CXJpzA6ptxVeY4iw+6fmzXZsLa0GpLZIHOGtNpCXmgRwIxBaI03rAUBEFARiI9vp7qrujxXWkayX9xVpcx7lbMij9gGUeJliUggoEUAjoEWHeSBAAhYmgAH4iUl9hDaOGua80yCsKAJhR+/my7USmarsDCEIUsAjkHIDj0MBwEQYAKyZ+5blDgD/uUdbIl1Zt1FiU+URAIBVwTgGLgihHwQAAFLE+DNfsLDw4U2Tn/6dSqTTMkLKwRYyLqyzqLENibhMYIIDWQOBOAYOADBLQiAQGgR4McJr8+YLjSaNzqaMuR5YZ4Zhawr6yxKbCP2MBCRgcyRABwDRyK4BwEQCDkCPGvQpHFjod08Nf/qOPGvcGGFAAlZR9mjD7aNbUQCAXcIwDFwhxLKgAAIWJ7Aa5JZAzacg/mmP/WGaRmwbrKAQ1ZayzbTGgXFAkYAjkHA0KNjEAABMxHgZXxjRo2UqjT/nQX0RJ+nTBVzwDEFrBPrJktsE5YoyuhALiIAx0BEBTIQAIGQJMC/rLWW9PFUfZ/W/aVT9v6E5o4ubAtmC/w5Ktboq0bFudJL1jDFHFbgPHBzjAO0sCYBf3y+Ss+epW49Eqm4eKcmxLYd29DDTw6mzskdNcsZnZm7cq1thkC2JNHeH5+i+PnqbEMDDv3B366/nlez66fHpkDUgWNgMHW8MQ0GiuZAQEXAX5+vHUXFNGLUKJfOAasWHlmHEpI7U5ziKDRq2oDCIsKoeatbVVrrv+Sjk8vPlisrDY7admLMWZkr3dFQ3Qs7BYsXZlB0E/Hpkeqynlz7i78nOqnLml0/ta5mvoZjYPDo4I1pMFA0BwIqAv78fPHMwYCBKVSwfoNKA/Nf8uODtDmphs4U2K32J397n568ml0/T2wJZFnEGASSPvoGARAwLQFe889T8VoBiWZTnnXlmQLsV2C2kQkufeAYBNd4QVsQAAE/E+DgvUUZ6dJ9DvysjrA73qeAdUSgoRAPhB4SgGPgITAUBwEQCD0CvNxvz65iSkudLd0+ORBUeJtj1ol1w5LEQIyANftEjIHB44pnXAYDRXMgoCJghs8Xxx5kZWVTZlYWZWWvVmnnv0uOI+ADkfjsA38+NjADfy3KZtdPS3cz5cExMHg08MY0GCiaAwEVATN+vjIVJ6GouJgKCgpsmrLj4Gqpo8okzUteXWD/4udTIGNjYgI6M2BG/mqAZtdPrauZr+EYGDw6eGMaDBTNgYCKAD5fKhgBuDQ7f7PrF4Ah09UlYgx0YUMlEAABEAABELAmATgG1hxXWAUCIAACIAACugjAMdCFDZVAAARAAARAwJoE4BhYc1xhFQiAAAiAAAjoIgDHQBc2VAIBEAABEAABaxKAY2DNcYVVIAACIAACIKCLABwDXdhQCQRAAARAAASsSQCOgTXHFVaBAAiAAAiAgC4CcAx0YUMlEAABEAABELAmgVrWNAtWgQAIgIB/CPB5CY5bIhcVFRvSeWxsjNOWyHxOAhII+JIAHANf0kXbIAACliPAZyGkZ2QoZyOsVw5SyvapfWoHI1/pz574JMX4+HY0KCWl0nGw5+EVBLwlgLMSvCXoUB97dTsAwS0IGEgg0J+v9IyFNH7iJDqrOAdmSBEREfT6jOmKgzDQL+oEmr8rI82unyv9zZKPGAOzjAT0AAEQMC0Bnhlo0TKWHhs5yjROAcNiB4V1Yt18PXth2sGBYoYTgGNgOFI0CAIgYCUCEydNoQEpg+jAwYOmNYt1Yx1ZVyQQ8JYAHANvCaI+CIBAwAlUnD9vuA4cS9A9MYlmzp5teNu+apB1ZQeBdTc6+YKx0TqiPWMIIPjQGI5oBQRAIIAETp48SbWjow3TYIeyqmDk6NGkDv6TNV4nIowSkjtTXMc2FNW0IYVFhlHzVrfKinsk37P9OyovLafD+0uocO1WylmZS2VnyzXb4EcKBw4m0aKMdIpu0kSzrCeZx48f96Q4ygYxAQQfGjx4CH4xGCiaAwEVAdnnKy/nK2obF6cqqf/SPlPgyimI69CGHn9hpM0h0N+b5zXZQZg5dQ4VrtuqWZmXOn6WnWXYqoVNmzdTwn1dhX1WnCsVyv0tlL0/zKKfv3no7Q+PEvSSQz0QAAHTENi5c5dhugxUpuK1nIKG0Q3ovWVv0Ud58/zuFLCRPDPBfbMOrIsssQ0jR42WZXss12LicWOoYGoCcAxMPTxQDgRAwB0Ca3Jy3CnmsswI5YtUvV+AY4XOyR1p+bdLKOH+To5Zfr9nHVgX1kmW+LHCBGV5pREpJzfXiGbQRhAQgGMQBIMEFUEABLQJrFmTQ5cuXdIu5CKXv0QXpGdISz00dhDNXP421YmsIy3j7wzWhXVi3WRpVuocr5cyXrhwgfLy1sq6gNxiBOAYWGxAYQ4IhCIBjpjfvGWLV6ZPnDRZWp+/eCe/PV6aH+gM1k3LOdCyzR3dN23eQliV4A4pa5SBY2CNcYQVIBDyBGYrv4z1Jp4pkO1TwFP1ZnYK7DazjrLHCmyb1myIvQ3Z66wgWrIpswFy9wlgVYL7rNwqiahYtzChEAjoIiD7fNkbW/PlF3TP3XfZb9165VUIvHOgaJtjDu7j5/hmenygZVRZaRn1vuNBKjlw1KkYb5+8e2eRx6sU8vMLqHtST6f21AKzRP3L3h9m0U/NzMzXmDEw8+hANxAAAY8IPDpkKJ0+c8ajOvxLWuQUcCOT35oQNE4B68sODOssSmxjlhJH4Uk6eeoUPTpsuCdVUNYCBOAYWGAQYQIIgMCvBA4dPky83JCD5dxNBQUFwqK8T4EZVh8IldMQss6suyhlZmWJxEIZM+z3QH86duyYMB9C6xKAY2DdsYVlIBCSBNZv2Oj2mQH8GCEre7WQE29eFKzp4SfFqxRktors/PP4CbR12zZRFmQWJwDHwOIDDPNAIBQJpKal2dbvX7x4UdP8goL1wnze5pg3EgrWxLMGbIMouTqFkWcKnhk/kebOe19UHbIQIADHIAQGGSaCQCgS4PX7vXr3oXNlZVLzZY8R+OyDYE8yG4qKi6WmMavEnr2IHSuk0CUAxyB0xx6Wg4DlCfCmPHfGtaVFixcLN0CSfUkG82yBfVBlNoicId4cioMwW7eJo4L1G+xN4DVECcAxCNGBh9kgYCUCN990k9SckpKjNHT4CIrv0InWrcuXllNn8CmJwZ7ctSE3L4/ubd+BeDvoo0flgYbNmjULdiTQ300COHbZTVAoBgIgYF4CWZkrKbl3X9q7d69UyW+3b6ceyjR53bp1qUf3btQzKYl+2LdPWL6hBRwDPv5ZlI4dP0GrP/tc2SY5yxZ4efr0aVGxajJ2CjJXLKdbmreoJseNNQlggyODxxUbbBgMFM2BgIqA1uervKKCBihLFY3Y03/3xe2qXvVd/vv8v2nfnh91Va7XsB5d36CurrrqSi1qtlLf6rru2qULzf/oAwqrXZu0+Otq3OBKZtfPYHN91hxmDHyGFg2DAAj4kwB/ca1avoyee+FFevudd/3ZtbCvXdt200MdhgjzXAlH/eUxemKacUcmu+pPlj/uybH012lTqUaNGrIikFuQAGIMLDioMAkEQpVAzZo16eWXphFvjdyiRfNQxeC13bGxMTaGzBJOgdc4g64BOAZBN2RQGARAwBUBPi9hy9cb6f25aRQV1chVceT/RqBxVJSN2caCfI/PnABE6xDAowTrjCUsAQEQUBHgX7oD+venfn37Ur6y7fGqTA62y9aMvFdV9/qSzy24M761rnYa3eg/Z6ZhwwaUlJioBGMmUvv4eKpVC18LugbNQpUQfGjwYCL4xWCgaA4EVASM+HxtKSyknJxc2n/ggPQoYiOCD1VqB+xSFnw4eFAK3di0KSUkdKa4Nu7v8GgEf1/CMLt+vrTdyLbhGhpJE22BAAiYnkDbuDjif5z4SOGDhw456Xxkfwk1CvIli3u2f+dkFwtiYlpSWupsYR6EIMAEEGOA9wEIgEDIEoiObiK0vURxDII9lZeWC02IjIgQyiEEATsBOAZ2EngFARAAgd8IHLaAY2AFG/CGDAwBOAaB4Y5eQQAETEAgNiZGqEXh2q1CeTAJZTbEKwGGSCCgRQCOgRYd5IEACFiagOxLMndVXtDbLbNB5gwFvcEwwDACcAwMQ4mGQAAEgo1AfHw7ocrnSstI9otbWMFkwpwVecQ2iBIvS0QCAS0CcAy06CAPBEDA0gQ4EC8psYfQxlnT5gjlwSD8+N10oZoyW4WFIQxZAnAMQnboYTgIgAATkD1O2KLEGfAv72BLrDPrLkp8oiQSCLgiAMfAFSHkgwAIWJoAb/YTHh4utHH6069TmWRKXlghwELWlXUWJbYxCY8RRGggcyAAx8ABCG5BAARCiwA/Tnh9xnSh0bzR0ZQhzwvzzChkXVlnUWIbsYeBiAxkjgTgGDgSwT0IgEDIEeBZgyaNGwvt5qn5V8eJf4ULKwRIyDrKHn2wbWwjEgi4QwCOgTuUUAYEQMDyBF6TzBqw4RzMN/2pN0zLgHWTBRyy0lq2mdYoKBYwAnAMAoYeHYMACJiJAC/jGzNqpFSl+e8soCf6PGWqmAOOKWCdWDdZYpuwRFFGB3IRATgGIiqQgQAIhCQB/mWttaSPp+r7tO4vnbL3JzR3dGFbMFvgz1GxRl84dtngccSxnwYDRXMgoCLgj89X6dmz1K1HIhUX71T17HzZtmMbevjJwdQ5uaNzpg8luSvX2mYIZEsS7V3zKYqfr842NODQH/zt+ut5Nbt+emwKRB04BgZTxxvTYKBoDgRUBPz1+dpRVEwjRo1y6RywauGRdSghuTPFKY5Co6YNKCwijJq3ulWltf5LPjq5/Gy5stLgqG0nxpyVudIdDdW9sFOweGEGRTcRnx6pLuvJtb/4e6KTuqzZ9VPrauZrOAYGjw7emAYDRXMgoCLgz88XzxwMGJhCBes3qDQw/yU/Pkibk2roTIHdan/yt/fpyavZ9fPElkCWRYxBIOmjbxAAAdMS4DX/PBWvFZBoNuVZV54pwH4FZhuZ4NIHjkFwjRe0BQEQ8DMBDt5blJEu3efAz+oIu+N9ClhHBBoK8UDoIQE4Bh4CQ3EQAIHQI8DL/fbsKqa01NnS7ZMDQYW3OWadWDcsSQzECFizT8QYGDyueMZlMFA0BwIqAmb4fHHsQVZWNmVmZVFW9mqVdv675DgCPhCJzz7w52MDM/DXomx2/bR0N1MeHAODRwNvTIOBojkQUBEw4+crU3ESioqLqaCgwKYpOw6uljqqTNK85NUF9i9+PgUyNiYmoDMDZuSvBmh2/dS6mvkajoHBo4M3psFA0RwIqAjg86WCEYBLs/M3u34BGDJdXSLGQBc2VAIBEAABEAABaxKAY2DNcYVVIAACIAACIKCLABwDXdhQCQRAAARAAASsSQCOgTXHFVaBAAiAAAiAgC4CcAx0YUMlEAABEAABELAmATgG1hxXWAUCIAACIAACugjAMdCFDZVAAARAAARAwJoE4BhYc1xhFQiAAAiAAAjoIgDHQBc2VAIBEAABEAABaxKoZU2zYBUIgAAI+IcAn5fguCVyUVGxIZ3HxsY4bYnM5yQggYAvCcAx8CVdtA0CIGA5AnwWQnpGhnI2wnrlIKVsn9qndjDylf7siU9SjI9vR4NSUiodB3seXkHAWwI4K8Fbgg71sVe3AxDcgoCBBAL9+UrPWEjjJ06is4pzYIYUERFBr8+YrjgIA/2iTqD5uzLS7Pq50t8s+YgxMMtIQA8QAAHTEuCZgRYtY+mxkaNM4xQwLHZQWCfWzdezF6YdHChmOAE4BoYjRYMgAAJWIjBx0hQakDKIDhw8aFqzWDfWkXVFAgFvCcAx8JYg6oMACAScQMX584brwLEE3ROTaObs2Ya37asGWVd2EFh3o5MvGButI9ozhgCCD43hiFZAAAQCSODkyZNUOzraMA12KKsKRo4eTergP1njdSLCKCG5M8V1bENRTRtSWGQYNW91q6y4R/I927+j8tJyOry/hArXbqWclblUdrZcsw1+pHDgYBItykin6CZNNMt6knn8+HFPiqNsEBNA8KHBg4fgF4OBojkQUBGQfb7ycr6itnFxqpL6L+0zBa6cgrgObejxF0baHAL9vXlekx2EmVPnUOG6rZqVeanjZ9lZhq1a2LR5MyXc11XYZ8W5UqHc30LZ+8Ms+vmbh97+8ChBLznUAwEQMA2BnTt3GabLQGUqXsspaBjdgN5b9hZ9lDfP704BG8kzE9w368C6yBLbMHLUaFm2x3ItJh43hgqmJgDHwNTDA+VAAATcIbAmJ8edYi7LjFC+SNX7BThW6JzckZZ/u4QS7u/kmOX3e9aBdWGdZIkfK0xQllcakXJyc41oBm0EAQE4BkEwSFARBEBAm8CaNTl06dIl7UIucvlLdEF6hrTUQ2MH0czlb1OdyDrSMv7OYF1YJ9ZNlmalzvF6KeOFCxcoL2+trAvILUYAjoHFBhTmgEAoEuCI+c1btnhl+sRJk6X1+Yt38tvjpfmBzmDdtJwDLdvc0X3T5i2EVQnukLJGGTgG1hhHWAECIU9gtvLLWG/imQLZPgU8VW9mp8BuM+soe6zAtmnNhtjbkL3OCqIlmzIbIHefAFYluM/KrZKIinULEwqBgC4Css+XvbE1X35B99x9l/3WrVdehcA7B4q2OebgPn6Ob6bHB1pGlZWWUe87HqSSA0edivH2ybt3Fnm8SiE/v4C6J/V0ak8tMEvUv+z9YRb91MzMfI0ZAzOPDnQDARDwiMCjQ4bS6TNnPKrDv6RFTgE3MvmtCUHjFLC+7MCwzqLENmYpcRSepJOnTtGjw4Z7UgVlLUAAjoEFBhEmgAAI/Erg0OHDxMsNOVjO3VRQUCAsyvsUmGH1gVA5DSHrzLqLUmZWlkgslDHDfg/0p2PHjgnzIbQuATgG1h1bWAYCIUlg/YaNbp8ZwI8RsrJXCznx5kW+SEv+vpT63zXY9u+IsqOhL9LDT4pXKchsFenw5/ETaOu2baIsyCxOAI6BxQcY5oFAKBJITUuzrd+/ePGipvkFBeuF+bzNMW8k5It07NAxKi7caft3vtz4Mx5YZ541YBtEydUpjDxT8Mz4iTR33vui6pCFAAE4BiEwyDARBEKRAK/f79W7D50rK5OaL3uMwGcfGJF++d8vHjejp46oE5kNRcXFouI2GbNK7NmL2LFCCl0CcAxCd+xhOQhYngBvynNnXFtatHixcAMk2ZekEbMFu7/ZQ/fU7UBL/7HCrZiH0yfP0Isj/koPxKXQL7947lA4DqbMBpEzxJtDcRBm6zZxVLB+g2NTuA8xAnAMQmzAYS4IWJHAzTfdJDWrpOQoDR0+guI7dKJ16/Kl5dQZfEqit+m1Z/5GFWUV9NywFynlj3+iXdt2C5vkqftP5i6jrjcn0ZK5n9Leou9pxYeZwrKeCN21ITcvj+5t34F4O+ijR+WBhs2aNfOke5QNYgI4djmIBw+qgwAI/EogK3MlJffuS3v37pUi+Xb7duqhTJPXrVuXenTvRj2TkuiHffuE5Rt66Rj877//o4ZNqpwLjingmYCUMQPol/9WzQbs2FRMkx95jnh2wZ5q16lNV/7uCvut7lc+/lmUjh0/Qas/+1zZJjnLFnh5+vRpUbFqMnYKMlcsp1uat6gmx401CWCDI4PHFRtsGAwUzYGAioDW56u8ooIGKEsVjdjTf/fF7ape9V/yr/83J79DBZ+5Nz0/8tnh9MjTD1H4NeH6O1XVbFGzlepO32XXLl1o/kcfUFjt2qTFX1/rxtYyu37GWuu71vAowXds0TIIgIAfCfAX16rly2jck2P92Kt2V81ib6G07Fm2Y5Jj4lpKCz84vB/lHfqSxr40xjCnQNqZBxnMcukni21OgQfVUDTICcAxCPIBhPogAAJVBGrWrEkvvzSNeGvkFi2aV2UE+KpN+ztpxJRhQi1ubnETPfrMw1S/UT1hfiCEsbExNobMskaNGoFQAX0GkAAcgwDCR9cgAAK+IcDnJWz5eiO9PzeNoqIa+aYTN1v9duN2Gtz+UXq89zhhjR9276PuzXrRy2Nn0KnjPwnL+EvYOCrKxmxjQb7HZ074S0f043sCiDEwmDGecRkMFM2BgIqAns8XL/3LV7Y9XpXJwXbZmpH39q6MiDH413f76a0p79KaFbn2Zm2v19W7ln468WvAX9NbmtL+7/dXyx87bQw9PG4QXR12dTW5nht3YgwaNmxASYmJSjBmIrWPj6dateQx6Xr469Fbbx2z66fXLn/Xg2NgMHG8MQ0GiuZAQEXAiM/XlsJCysnJpf0HDkiPIvbWMfjPv/9D7ep3ti1XtKv/f/d3pklvjadP5y2jOS/PtYlXFn1KvBPiS09Mp8M/HrYXpQeG9aWpf3+u8l7vhcwxGDwohW5s2pQSEjpTXBv3d3g0gr9eW9ypZ3b93LHBDGXkrqEZtIMOIAACIGAwgbZxccT/OB1QnAPRhj58hkEjL5YsXvm7K20xBbwiIer3UfT8zMnUrtu9Qkviu7ejVcWf0od/+5jefX6WrcyQ8X8SlvVEKDuHIb7dvZSWOtuTplA2xAjAMQixAYe5IAACrgmUeOkYcA+Dxw6ksPAw6v1oL2Vfgis1O/3dVb+jkX8ZTokp3Wln4S6K/kMTzfLuZLINSCCghwCCD/VQQx0QAAFLEIiNiRHacdiAL1X+sh8w6gGXToFagcbK7EL3/l3VIt3XMhtkNuvuCBUtRwCOgeWGFAaBAAi4SyAiMlJYtHDtVqE8mIQyG2Q2B5Nt0NW3BPAowbd80ToIgICJCch+PRfm+84x6P1IMt0Z39pGhWcIfJVkNshs9pUeaDf4CMAxCL4xg8YgAAIGEYiPbydsiQP3+Be37IRCYSU3hY1viiL+58vEukuDDyU2+1IftB1cBPAoIbjGC9qCAAgYSCAyIoIGpQwUtjhr2hyhPBiEMt3ZVrYZCQS0CMAx0KKDPBAAAcsTeGjQIKGNW5Rf3bLn9MIKJhGyzqy7KMlsFZWFLHQJwDEI3bGH5SAAAgoBfpzQpHFjIYspQ56nstIyYZ4Zhawr6yxKbKPs0YmoPGShSwCOQeiOPSwHARD4jcCYMaOFLPg5veyLVlghwELWVRZbILMxwCqjexMSgGNgwkGBSiAAAv4lwFsEy2YNclbk0fy3F/hXIR29sY6sqyixbWwjEgi4QwCOgTuUUAYEQMDSBDgg7+9zUqU2Tn/6DZr+1BvS/EBnsG6soyyxbQg6lNGB3JEAHANHIrgHARAISQL8/F22QoGBzH9nAT3R5ylTxRxwTAHrxLrJ0phRIxFbIIMDuZAAHAMhFghBAARCkcBrM6ZTTExLqek8Vd+ndX/plL20og8y3NGFbZkyZbIPekeTViYAx8DKowvbQAAEPCLA0+2fr87WdA44uI9/pT/SeRjlrlzrUftGFOY+uW/WQRZoyP2wU8C24BGCEdRDq40aFedKL4WWyb61FueB+5YvWg9tAv76fO0oKqYRo0ZRcfFOl8DDI+tQQnJn2y6JjZo2oLCIMGre6laX9dwpsGf7d1R+tlxxAI7a9lTIWZlL59xYPslOQVpqKt0eKz4kyp2+RWX8xV/Utzsys+vnjg1mKAPHwOBRwBvTYKBoDgRUBPz5+So9e5YGDEyhgvUbVBqY/zIpsQel+SjY0J/89ZA2u356bApEHTxKCAR19AkCIGB6AvbHChy8FyyJdV28MAOPD4JlwEyqJxwDkw4M1AIBEDAHAQ5IXJSRLt3nwAxa8j4FrCPrigQC3hKAY+AtQdQHARCwPIGeSYm0Z1ex8tx+NoWHh5vGXtaFdWLdWEckEDCCAGIMjKCoagPPuFQwcAkCBhMww+eLYw+ysrIpMyuLsrJXG2yhe81xHEHPpCRKUpwBf646MAN/LUJm109LdzPlwTEweDTwxjQYKJoDARUBM36+MhUnoai4mAoKCmyasuPgzmoGlVnSS15dYP/ij4+Pp9iYmIDODJiRvxqe2fVT62rmazgGBo8O3pgGA0VzIKAigM+XCkYALs3O3+z6BWDIdHWJGANd2FAJBEAABEAABKxJAI6BNccVVoEACIAACICALgJwDHRhQyUQAAEQAAEQsCYBOAbWHFdYBQIgAAIgAAK6CMAx0IUNlUAABEAABEDAmgTgGFhzXGEVCIAACIAACOgiAMdAFzZUAgEQAAEQAAFrEoBjYM1xhVUgAAIgAAIgoIsAHANd2FAJBEAABEAABKxJoJY1zYJVIAACIOAfAnxeguOWyEVFxYZ0Hhsb47QlMp+TgAQCviQAx8CXdNE2CICA5QjwWQjpGRnK2QjrlYOUsn1qn9rByFf6syc+STE+vh0NSkmpdBzseXgFAW8J4KwEbwk61Mde3Q5AcAsCBhII9OcrPWMhjZ84ic4qzoEZUkREBL0+Y7riIAz0izqB5u/KSLPr50p/s+QjxsAsIwE9QAAETEuAZwZatIylx0aOMo1TwLDYQWGdWDdfz16YdnCgmOEE4BgYjhQNggAIWInAxElTaEDKIDpw8KBpzWLdWEfWFQkEvCUAx8BbgqgPAiDgNwK1r75a2FfF+fNCuTdCjiXonphEM2fP9qYZv9ZlXdlBYN2NTjLGsjExun+05z8CCD70H2v0BAIg4CWBevXq0b/273dq5eTJk1Q7OtpJrlewQ1lVMHL0aFIH/8naqhMRRgnJnSmuYxuKatqQwiLDqHmrW2XFPZLv2f4dlZeW0+H9JVS4divlrMylsrPlmm3wI4UDB5NoUUY6RTdpolnWk8zjx48Li9evX18ohzB4CcAxCN6xg+YgEHIErr/+eqFjcOLECWpqkGPAv7bdcQriOrShx18YaXMIfDUQdgcjTumg9yO9lP+n2RyEmVPnUOG6rdJu2aHhmYPPsrMMW7XAjEWJnTUkaxHAowRrjSesAQFLE6hX73qhfTt37hLK9QgHKl+oWgWcnKUAABBeSURBVDMFDaMb0HvL3qKP8ub51CmQ6c4zE9w368C6yBLbMHLUaFm2x3IZk/r14Rh4DNPkFeAYmHyAoB4IgEAVAdmv0zU5OVWFvLgaoXyRqvcLcGyqc3JHWv7tEkq4v5Njlt/vWQfWhXWSJX6sMEFZXmlEysnNFTaDRwlCLEEthGMQ1MMH5UEgtAi0vuMOocFr1uTQpUuXhHnuCvlLdEF6hrT4Q2MH0czlb1OdyDrSMv7OYF1YJ9ZNlmalzvF6KeOFCxcoL2+tsIs7W7cWyiEMXgJwDIJ37KA5CIQcgV69elKNGjWc7OaI+c1btjjJPRFMnDRZWpy/eCe/PV6aH+gM1k3LOdCyzR3dN23eQqJVCZdddhklJ3PsA5KVCMAxsNJowhYQsDiB6669ltrd+0ehlbOVX8Z6E88UyPYp4Kl6XzsFK+dn0aieT9j+/WXoi7rMYB1ljxXYNq3ZEFcdzpIs2WzfPp7qhIW5qo78ICMAxyDIBgzqgkCoE0juJf6FunTZcvp602aP8fAqhAmS2QIO7nv1g5c8btOTCv/593/ojQlv0rrsAtu/G6L0L/9jXWUBiWyjnv0N8vMLaOWqTKFJyT17CuUQBjcBOAbBPX7QHgRCjsCgQSl0zTXXCO1+dMhQOn3mjDBPJuRf0rKzDya/NcHnMQVZGZ/RTydOV6o3YPSDldeeXnDMAessSmxjlhJH4Uk6eeoUPTpsuLBKZGQk8VggWY8AHAPrjSksAgFLEwivU4cmTRR/+R06fJh4uSEHy7mbCgoKhEV5nwJfrz745ZdfKO2VeZX9p4wZQHXrX1d5r+eCdWbdRSkzK0skFsqYYb8H+tOxY8eE+c89O4WuvuoqYR6EwU0AjkFwjx+0B4GQJDBi+DDprn7rN2x0+8wAnlrPyl4tZMibF/k65a1aR4d/PFzZzZ/GDa689ubi4SfFqxRktor6+vP4CbR12zZRFjVp3JiGDxsqzIMw+AnAMQj+MYQFIBByBC6//HKaNvVFqd2paWm29fsXL16UluGMgoL1wnze5pg3EvJ1mjfjg8ouklJ6UOOboirvvbngWQO2QZRcncLIMwXPjJ9Ic+e9L6puk01/9RXiFQlI1iQAx8Ca4wqrQMDyBPr17UP9H3hAaiev3+/Vuw+dKyuTlpE9RuCzD3ydNuduoeLCnZXdPPLnhyqvjbiQ2VBUXCxtnlkl9uxF7FjJ0qCUgZSsLBtFsi4BOAbWHVtYBgKWJ5A2Zzbd1bat1E7elOfOuLa0aPFi4QZIsi9Jf8wWvP/6h5V6x3e/l1rc0bzy3ogLmQ0iZ4g3h+IgzNZt4qhg/QZp97xUNHXWTGk+MqxBAI6BNcYRVoBASBLgRwpLP11CN990k9T+kpKjNHT4CIrv0InWrcuXllNn8CmJvky7v9lD67/YWNnFsPGPVl4bdeGuDbl5eXRv+w7E20EfPSoONGSdmjVrRksWL8IjBKMGyMTt4HRFEw8OVAMBEHBN4Bpl2VxW5kpK7t2X9u7dK63w7fbt1EOZJq9bty716N6NeiYl0Q/79gnLN/SxY/CPNz6s7DcmrqVP4hn4+GdROnb8BK3+7HNlm+QsW+Dl6dNVSyVF5VnGTkHmiuUUER4uKwK5hQjUqDhX6t0G4xaCYYQptcMjhc0onIVyCEEABIwhUF5RYTtqWLanvye97L643ZPiHpU9+MMh6nZL1TN6PiXRV8siW9Rs5ZFuosJdu3Sh+R99QGG1a4uyTSXD319jhgOPEozhiFZAAAQCTIC/uFYtX0bjnhwbYE20u//orQWVBZre0pQ69mxfeW+2C2a59JPFQeEUmI1dMOsDxyCYRw+6gwAIVCNQs2ZNevmlabTmyy+oRQtjg/mqdaTz5uTRU7QwdXFl7eGThpjymX1sbIyNIbMUHVpVaQAuLEkAjoElhxVGgUBoE7jn7rtoy9cb6f25aRQV1cg0MBbOrnIKrqt3LSUO7GYa3ViRxlFRNmYbC/KJGSKFJgEEH4bmuMNqELA8Af6lO6B/f+rXty/lK9ser8rkYLtszch7X0IpKy2jj9/NqOxi2MRH6Yorr6i8D9RFw4YNKCkxUQnGTKT28fFUqxa+FgI1FmbpF8GHBo8Egl8MBormQMBgAlsKCyknJ5f2HzggPYrYF8GHH/5tPr02/k2bNbXr1Ka8Q19QWLh45YBRJsuCDwcrhx/d2LQpJSR0prg2vt/h0Sh7XLWDv7+uCLmXD9fQPU4oBQIgYBECbePiiP9x4iOFDx465GTZkf0l1MjAJYt8tLJ6QyM+E8HXTsGe7d852cWCmJiWlJY6W5gHIQgwAcQY4H0AAiAQsgSio5sIbS9RHAMjk5FHK7urV3lpubBoZESEUA4hCNgJwDGwk8ArCIAACPxG4LCBjoEvjlZ2Z6CMtMGd/lDGOgTgGFhnLGEJCICAhwRiY2KENQrXbhXK9Qh9dbSyK11kNsQrAYZIIKBFAI6BFh3kgQAIWJqA7Esyd1WeYXanvTKvsi0jj1aubFRyIbNB5gxJmoE4BAnAMQjBQYfJIAACvxKIj28nRHFOWVoo+8UtrCAR8tHKfGCSPRl9tLK9XcfXnBV5xDaIEi9LRAIBLQJwDLToIA8EQMDSBDgQLymxh9DGWdPmCOWeCOfO+EdlcV8crVzZuMPFx++mO0h+vZXZKiwMYcgSwHLFkB16GA4CIMAE+HFCVvZqJxhblDgD/uWt94Cj//33f/SH2262/ePGew72zy911pl1FyU+URIJBFwRwAZHrgh5mI8NNjwEhuIgEGACpWfPUvPbYujcuXNOmvBeBsu+WUx1Ius45ZlRwLsr9mndn3gfBscUrhyZvGdXMVl5uSL+/jqOur57PErQxw21QAAELEKAvyhfnzFdaA1/wU4Z8rwwz4xC1lXkFLCubKOVnQIzjkew6gTHIFhHDnqDAAgYRoC3CG7SuLGwPZ6af3Xc68I8MwlZR9ZVlNg2thEJBNwhAMfAHUooAwIgYHkCr0lmDdhwDuab/tQbpmXAuskCDllpLdtMaxQUCxgBOAYBQ4+OQQAEzESAl/GNGTVSqtL8dxbQE32eIn6Ob5bEurBOrJsssU1YoiijA7mIABwDERXIQAAEQpIA/7LWWtLHU/Uc3CebsvcnNHd0YVswW+DPUbFGX1iVYPA4IirWYKBoDgT8TIBXKXTrkUjFxTs1e27bsQ09/ORg6pzcUbOc0Zm5K9faZghkSxLt/fEpip+vzg6pgEP8/bWPvnevcAy84+dUu94NDani/Hkn+YljJVT76qud5BCAAAiYj8COomIaMWqUS+eANQ9XljImJHemOMVRaNS0AYVFhFHzVrcaYhQfnVx+tlxZaXDUthNjzspc6Y6G6g7ZKVi8MIOim4hPj1SXtco1/93lv7+Oif/u8t9fJPcJwDFwn5VbJVvGtqJ/7d/vVHZX8Q5qGh3tJIcABEDAnAR45mDAwBQqWL/BnApKtOLHB2lzUkNqpoBR/Pivf1HM7Xc4Ufn9jTdS8Y5vneQQyAkgxkDORlfO9ddfL6x34sQJoRxCEAABcxLgNf88Fa8VkGg2zVlXnikIxf0KZH9j69WrZ7ZhMr0+cAwMHqJ69cSOwc6duwzuCc2BAAj4gwAH7y3KSJfuc+APHVz1wfsUsI6hHGhYpDz+EaX69eEYiLhoyeAYaNHRkSfzTtfk5OhoDVVAAATMQICX+/F2wmmps4m3FjZLYl1YJ9Yt1Jck5uTmCoelfv36QjmEcgJwDORsdOW0vsP5GRc3tGZNDl26dElXm6gEAiBgDgK8e6DdQdBa1uhrbW1xBL85BNjRkOjChQuUl7dWiP3O1q2FcgjlBBB8KGejK+en06cp+sabhE5Azldf0N133aWrXVQCARAwJ4HMrGwqKi6mgoICm4IctOhqqaO7lvDqAnu8AJ8CGRsTE/IzAyJ2GzZ+TV26dXfKuuyyy+jIoQNUJyzMKQ8COQE4BnI2unN4DbQokrlvn940/8MPdLeLiiAAAiAAAs4EUgY/RCtXZTpldOrUkbJWrnCSQ6BNAI8StPnoyk3u1UtYb+my5fT1ps3CPAhBAARAAAQ8J5CfXyB0Cril5J49PW8QNQgzBj54E5wrK6MWLWPpzJkzTq03joqijRsK6NprrnHKgwAEQAAEQMB9AidPnaK7/9iOjh075lQpMjKS/rl3D1191VVOeRBoE8CMgTYfXbnhderQpIkThHUPHT5MA1MG2YJlhAUgBAEQAAEQcEmAAw77PdBf6BRw5eeenQKnwCVFcQE4BmIuXktHDB8m3Y50/YaNNHHSFK/7QAMgAAIgEKoE/jx+Am3dtk1oPu/rMHzYUGEehK4JwDFwzUhXicsvv5ymTX1RWjc1LY0mTJxEFy9elJZBBgiAAAiAQHUCPFPwzPiJNHfe+9UzVHfTX32FeEUCkj4CiDHQx83tWkOGDqfFn3wiLc9RsxkLPiZ+/IAEAiAAAiAgJ8DxWw/2HyBc9WWvNShlIP1dOSsCST8BzBjoZ+dWzbQ5s+mutm2lZXlTjjvj2tKixYuFex9IKyIDBEAABEKEAG8OtyA9g1q3idN0Ctrd+0dKnTUzRKj4zkzMGPiObWXLZ0pLqWOnBPph375Kmejijlat6OWXplGHDu1F2ZCBAAiAQMgRyM3Lo788/wLt2FGkaXuzZs0oL+crijDRltWaCps4E46BnwaHVyMk9+5Le/fuddlj3bp1qUf3bsoOZ0nUqFEjuu66aylKeUUCARAAAasSOP/zz3Ra2Tn2p59O05EjRygzK4uyslfbZK5sZqcgc8Vy5e9lQ1dFke8GATgGbkAyqkh5RQUNUJYqyvb0NqoftAMCIAACoUKga5cuNP+jDyisdu1QMdnndiLGwOeIqzrgN+6q5cto3JNjq4S4AgEQAAEQ0EWA/5Yu/WQxnAJd9OSVMGMgZ+PTHN4aeey4cbR79x6f9oPGQQAEQMBqBGJjY+jNN96ge+7GoXS+GFvMGPiCqhtt8ht6y9cb6f25aRQVhfgBN5ChCAiAQIgT4C3l+W/mxoJ8OAU+fC9gxsCHcN1t+pdffqF85cjWVZkcbJNNR4867/vtblsoBwIgAAJWItCwYQNKSky0HTfdXjl6ulatWlYyz5S2wDEw4bBsKSyknJxc2n/gAJWUHKXDSoQuR+lWKMGLSCAAAiBgRQK1lRgsXoXFswINGtxANzZtSgkJnSmuTRsrmmtqm+AYmHp4oBwIgAAIgAAI+JcAYgz8yxu9gQAIgAAIgICpCcAxMPXwQDkQAAEQAAEQ8C8BOAb+5Y3eQAAEQAAEQMDUBOAYmHp4oBwIgAAIgAAI+JcAHAP/8kZvIAACIAACIGBqAnAMTD08UA4EQAAEQAAE/EsAjoF/eaM3EAABEAABEDA1ATgGph4eKAcCIAACIAAC/iUAx8C/vNEbCIAACIAACJiaABwDUw8PlAMBEAABEAAB/xKAY+Bf3ugNBEAABEAABExNAI6BqYcHyoEACIAACICAfwnAMfAvb/QGAiAAAiAAAqYmAMfA1MMD5UAABEAABEDAvwTgGPiXN3oDARAAARAAAVMTgGNg6uGBciAAAiAAAiDgXwJwDPzLG72BAAiAAAiAgKkJ/D+t58UBEp2fvAAAAABJRU5ErkJggg==" title="railroad diagram" alt="Simpler Syntax" />
+<figcaption aria-hidden="true">Simpler Syntax</figcaption>
+</figure>
+<p>This can guide to simplify the logic in the extracted
+<code>interaction()</code> function.</p>
+<p>A remaining question is, how to add suitable error handling and
+possible re-synchronization. So we need to answer: What are possible
+user errors?</p>
+<ul>
+<li>failure to provide a number, when expected</li>
+<li>failure to provide a character between numbers that is not one of
+the operators or ‘=’</li>
+<li>attempting to divide by zero</li>
+</ul>
+<p>Fortunately, reading stuff from a <code>std::istream</code> with the
+extraction <code>operator&gt;&gt;</code> already ignores white space
+characters, so those cannot be problematic.</p>
+<p>Now, what should happen if the input format is wrong? Classic parser
+generators (e.g., yacc) created code that stopped consuming input and
+exit with printing “syntax error”. In my experience implementing
+explicit error handling within a parser easily consumes more code than
+the regular syntax specification.</p>
+<p>Here, the syntax is simple enough to notify the user and may be skip
+everything to the next newline character and then try to start over.
+This will be the strategy I chose.</p>
+<p>With all that in mind we can split the original main() function
+into</p>
+<ul>
+<li>a function attempting to read a number;</li>
+<li>a function attempting to read an operator symbol, including
+<code>&#39;=&#39;</code>;</li>
+<li>an error handling function that notifies the user and skips input to
+the next newline character</li>
+<li>in addition we will extend our apply function with cases for
+handling the error and result output cases.</li>
+</ul>
+<p>All this arranged in a loop that runs until there is no more input to
+consume, which is a slightly change in behavior to make the interactive
+experience more user friendly. The old code just stopped when the first
+number of an expression expected wasn’t a number. This will also be the
+case at the end of input.</p>
+<p>But before we start with that, we need to figure out, how the input
+functions should notify their call-site about an error. For user input
+we should expect errors to happen, therefore, using exceptions would not
+be perfect. On the other hand, failing to read a number from an input
+stream, already sets that stream’s <code>fail()</code> state. This
+mechanic is already used in the conditions of the original code that
+read input as a side effect. Those employ the stream’s explicit
+conversion to bool that denotes if a stream input has not failed
+(roughly, see <a href="https://en.cppreference.com/w/cpp/io/ios_base/iostate">table on
+cppreference.com</a> ) So it is important to reset the fail state,
+whenever after a detected error input is to be skipped to the next
+newline. For the function reading a number, we can return a
+<code>std::optional&lt;double&gt;</code> and return an empty optional in
+case of an input failure. Using an optional object allows to extend the
+domain of a type with one extra value (nothing) to denote an error. For
+the function reading an operator symbol, we can extend the enumeration
+with an extra code for a syntax error that we can later process, so
+there is no need for an optional wrapper, because we select different
+code paths for different operator symbols anyway.</p>
+<h1 id="setting-up-the-pieces">Setting Up The Pieces</h1>
+<h2 id="reading-a-number-or-not">Reading a Number (or not)</h2>
+<p>Now let us start with tests for the function to read a number:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testReadNumberEmptyFails<span class="op">(){</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{};</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> maybenumber <span class="op">=</span> readNumber<span class="op">(</span>input<span class="op">);</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    ASSERT<span class="op">(</span><span class="kw">not</span> maybenumber<span class="op">.</span>has_value<span class="op">());</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testReadNumber<span class="op">(){</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot; 3.14 &quot;</span><span class="op">};</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> maybenumber <span class="op">=</span> readNumber<span class="op">(</span>input<span class="op">);</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="fl">3.14</span><span class="op">,</span> <span class="op">(</span>maybenumber<span class="op">?*</span>maybenumber<span class="op">:</span><span class="fl">0.0</span><span class="op">));</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testReadNumberWithNonNumber<span class="op">(){</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot;a 3.14 &quot;</span><span class="op">};</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> maybenumber <span class="op">=</span> readNumber<span class="op">(</span>input<span class="op">);</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    ASSERT<span class="op">(</span><span class="kw">not</span> maybenumber<span class="op">.</span>has_value<span class="op">());</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Leading to our implementation:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;</span> readNumber<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">){</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> result<span class="op">{};</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>in <span class="op">&gt;&gt;</span> result<span class="op">){</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">{};</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="reading-a-valid-operation-symbol">Reading a Valid Operation
+Symbol</h2>
+<p>Now for tests reading a valid operator symbol. For that we first
+extend our enumeration type as follows</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">enum</span> <span class="kw">class</span> operation <span class="op">:</span> <span class="dt">char</span> <span class="op">{</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  err<span class="op">,</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  res <span class="op">=</span> <span class="ch">&#39;=&#39;</span><span class="op">,</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  add <span class="op">=</span> <span class="ch">&#39;+&#39;</span><span class="op">,</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  sub <span class="op">=</span> <span class="ch">&#39;-&#39;</span><span class="op">,</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  mul <span class="op">=</span> <span class="ch">&#39;*&#39;</span><span class="op">,</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  div <span class="op">=</span> <span class="ch">&#39;/&#39;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="op">;</span></span></code></pre></div>
+<p>I stick with three letter names to keep the layout nice and take the
+default initial value of zero for the first enumerator to mark the
+erroneous input. This is convenient, because zero would also be the
+value of a default initialized variable of type
+<code>operation</code>.</p>
+<p>That now allows us to formulate some tests:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testReadOperationEmptyFails<span class="op">(){</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{};</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>err<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testReadOperationInvalidSymbolFails<span class="op">(){</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot; a &quot;</span><span class="op">};</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>err<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testReadOperationResult<span class="op">(){</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot; = &quot;</span><span class="op">};</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>res<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testReadOperationAll<span class="op">(){</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot; = + - * / %&quot;</span><span class="op">};</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>res<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>add<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>sub<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>mul<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>div<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span>operation<span class="op">::</span>err<span class="op">,</span> readOperation<span class="op">(</span>input<span class="op">));</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>The last test is not splendid, because it tests multiple things in a
+single test function, however I didn’t split it up, to save a few lines
+to give you the following guidance: In general, a single test function
+should only test a single property.</p>
+<p>Now an implementation results from those tests as follows:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>operation readOperation<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">){</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> ch<span class="op">{};</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">constexpr</span> <span class="bu">std::</span>string_view<span class="op"> </span>opers<span class="op">{</span><span class="st">&quot;=+-*/&quot;</span><span class="op">};</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>in <span class="op">&gt;&gt;</span> ch <span class="op">&amp;&amp;</span> <span class="bu">std::</span>string_view<span class="bu">::</span>npos<span class="op"> !=</span> opers<span class="op">.</span>find<span class="op">(</span>ch<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">static_cast</span><span class="op">&lt;</span>operation<span class="op">&gt;(</span>ch<span class="op">);</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> operation<span class="op">::</span>err<span class="op">;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Extracting the read operation into a separate function, will allow
+the using function to store it in a const variable, which eases
+understanding and reasoning about the code.</p>
+<p>The check for a valid character in <code>readOperation</code> can be
+simpler in C++23, where <code>std::string_view</code> provides a member
+function <code>.contains(char)</code>. But the use of the
+<code>.find(char)</code> function shows the use of a special extra value
+(<code>npos</code>) that marks the “error” of not having found the
+character. This is an alternative to wrapping a type in a
+<code>std::optional</code> to have that extra value. With a time
+machine, we would be able to change many places in the standard library
+to use a <code>std::optional</code> instead of an invented special value
+as a function return type that includes the ability to show errors.
+Unfortunately, the C++ standard guidance principle of backwards
+compatibility prevents such changes towards more modern design.</p>
+<h2 id="skipping-over-input-errors">Skipping Over Input Errors</h2>
+<p>Now to the error resynchronization function that will reset the input
+stream and skip to the next newline.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>istream<span class="op"> &amp;</span>clearAndSkipToNewline<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">){</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    in<span class="op">.</span>clear<span class="op">();</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span><span class="op">(</span>in <span class="op">&amp;&amp;</span> in<span class="op">.</span>get<span class="op">()</span> <span class="op">!=</span> <span class="ch">&#39;</span><span class="sc">\n</span><span class="ch">&#39;</span><span class="op">);</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> in<span class="op">;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>We implement it returning the passed istream object by reference.
+That way we can use is as a manipulator as well. A sophisticated
+implementation would be templatized to allow using it for streams of
+different character types and traits as well. But that is beyond what we
+are attempting here.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testSkipToNewlineAsManipulator<span class="op">(){</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot; 123a </span><span class="sc">\n</span><span class="st">456&quot;</span><span class="op">};</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    input<span class="op">.</span>setstate<span class="op">(</span><span class="bu">std::</span>ios_base<span class="bu">::</span>failbit<span class="op">);</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    input <span class="op">&gt;&gt;</span> clearAndSkipToNewline<span class="op">;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>string<span class="op"> </span>s<span class="op">{};</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    getline<span class="op">(</span>input<span class="op">,</span>s<span class="op">);</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="st">&quot;456&quot;</span><span class="op">,</span>s<span class="op">);</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="refactored-user-interaction">Refactored User Interaction</h2>
+<p>With all set in place and some more tests, for example:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testSimpleAddition<span class="op">(){</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot;1 + 2 =&quot;</span><span class="op">};</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>ostringstream<span class="op"> </span>output<span class="op">{};</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    interaction<span class="op">(</span>input<span class="op">,</span>output<span class="op">);</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="st">&quot;Result: 3</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>output<span class="op">.</span>str<span class="op">());</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testSimpleSubtraction<span class="op">(){</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot;1 - 2 =&quot;</span><span class="op">};</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>ostringstream<span class="op"> </span>output<span class="op">{};</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    interaction<span class="op">(</span>input<span class="op">,</span>output<span class="op">);</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="st">&quot;Result: -1</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>output<span class="op">.</span>str<span class="op">());</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testSimpleMultiplication<span class="op">(){</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot;2 * 3 =&quot;</span><span class="op">};</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>ostringstream<span class="op"> </span>output<span class="op">{};</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    interaction<span class="op">(</span>input<span class="op">,</span>output<span class="op">);</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="st">&quot;Result: 6</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>output<span class="op">.</span>str<span class="op">());</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testSimpleDivision<span class="op">(){</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot;6 / 2 =&quot;</span><span class="op">};</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>ostringstream<span class="op"> </span>output<span class="op">{};</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    interaction<span class="op">(</span>input<span class="op">,</span>output<span class="op">);</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="st">&quot;Result: 3</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>output<span class="op">.</span>str<span class="op">());</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testErrorResync<span class="op">(){</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot;abc  </span><span class="sc">\n</span><span class="st"> 1 % 2 </span><span class="sc">\n</span><span class="st">1 + 2</span><span class="sc">\n</span><span class="st"> =</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">};</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>ostringstream<span class="op"> </span>output<span class="op">{};</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    interaction<span class="op">(</span>input<span class="op">,</span>output<span class="op">);</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="st">&quot;invalid operator, restarting</span><span class="sc">\n</span><span class="st">Result: 3</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>output<span class="op">.</span>str<span class="op">());</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> testMultipleOperationsAndResults<span class="op">(){</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>istringstream<span class="op"> </span>input<span class="op">{</span><span class="st">&quot;1 + 1 + 1 + 2 * 10 -8 =  </span><span class="sc">\n</span><span class="st"> 1 / 2 + </span><span class="sc">\n</span><span class="st">1 + 2</span><span class="sc">\n</span><span class="st"> =</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">};</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>ostringstream<span class="op"> </span>output<span class="op">{};</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>    interaction<span class="op">(</span>input<span class="op">,</span>output<span class="op">);</span></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    ASSERT_EQUAL<span class="op">(</span><span class="st">&quot;Result: 42</span><span class="sc">\n</span><span class="st">Result: 3.5</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>output<span class="op">.</span>str<span class="op">());</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>we can combine all the stuff again:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> interaction<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">,</span> <span class="bu">std::</span>ostream<span class="op"> &amp;</span>out<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> result <span class="op">=</span> readNumber<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span><span class="kw">not</span> in<span class="op">.</span>eof<span class="op">()){</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>result<span class="op">){</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>            <span class="kw">auto</span> <span class="at">const</span> oper <span class="op">=</span> readOperation<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>            handleResultOrError<span class="op">(</span>oper<span class="op">,</span> <span class="op">*</span>result<span class="op">,</span> in<span class="op">,</span> out<span class="op">);</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>            result <span class="op">=</span> apply<span class="op">(*</span>result<span class="op">,</span> oper<span class="op">,</span> readNumber<span class="op">(</span>in<span class="op">));</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>            clearAndSkipToNewline<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>            result <span class="op">=</span> readNumber<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="producing-output">Producing Output</h2>
+<p>Note, that I extracted the output generation into
+handleResultOrError() to make the logic of the interaction function more
+clear. This gives some redundancy in checking for <code>err</code> and
+<code>res</code>, but otherwise our apply function doing the actual
+computation would require to depend on <code>&lt;istream&gt;</code> and
+<code>&lt;ostream&gt;</code> as well.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> handleResultOrError<span class="op">(</span><span class="dt">double</span> <span class="at">const</span> result<span class="op">,</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                         operation <span class="at">const</span> oper<span class="op">,</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                         <span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">,</span> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                         <span class="bu">std::</span>ostream<span class="op"> &amp;</span>out<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>oper <span class="op">==</span> operation<span class="op">::</span>res<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>        out <span class="op">&lt;&lt;</span> <span class="st">&quot;Result: &quot;</span> <span class="op">&lt;&lt;</span> result <span class="op">&lt;&lt;</span> <span class="ch">&#39;</span><span class="sc">\n</span><span class="ch">&#39;</span><span class="op">;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>oper <span class="op">==</span> operation<span class="op">::</span>err<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        out <span class="op">&lt;&lt;</span> <span class="st">&quot;invalid operator, restarting</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">;</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        clearAndSkipToNewline<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>In addition, I changed apply to return a
+<code>std::optional&lt;double&gt;</code> and take it as the second
+operand. This is almost a kind of “monadic” behaviour, where the
+<code>result</code> is empty in case of an invalid operation (division
+by zero), or it will hold the actual result. It also allows us to reset
+the result to the newly read number, when the result was printed via
+input of <code>&#39;=&#39;</code>.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;</span> apply<span class="op">(</span><span class="dt">double</span> <span class="at">const</span> lhs<span class="op">,</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                            operation <span class="at">const</span> oper<span class="op">,</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                            <span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;</span> rhs<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">using</span> <span class="kw">enum</span> operation<span class="op">;</span> <span class="co">// C++20</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span> <span class="op">(</span>oper<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> res<span class="op">:</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">[[</span><span class="at">fallthrough</span><span class="op">]];</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> err<span class="op">:</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs<span class="op">;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> add<span class="op">:</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs <span class="op">?</span>  lhs <span class="op">+</span> <span class="op">*</span>rhs  <span class="op">:</span> rhs<span class="op">;</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> sub<span class="op">:</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs <span class="op">?</span>  lhs <span class="op">-</span> <span class="op">*</span>rhs  <span class="op">:</span> rhs<span class="op">;</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> mul<span class="op">:</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs <span class="op">?</span>  lhs <span class="op">*</span> <span class="op">*</span>rhs  <span class="op">:</span> rhs<span class="op">;</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> div<span class="op">:</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs <span class="op">&amp;&amp;</span> <span class="op">*</span>rhs <span class="op">?</span> lhs <span class="op">/</span> <span class="op">*</span>rhs <span class="op">:</span> <span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;{};</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">{};</span> <span class="co">// some logic error occured</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>In case of a result output or an error, the next read number is just
+returned. Because both cases have the same code we use the
+<code>[[fallthrough]]</code> attribute, to mark that the missing
+<code>break;</code> is intentional.</p>
+<p>If there is no second operand (rhs is the empty optional), then the
+apply function fails, by just returning that empty optional. Similarly,
+when an attempt to divide by zero is made, we return an explicit
+<code>std::optional&lt;double&gt;{}</code> In all other cases, the
+result is returned as an optional.</p>
+<p>Note, that the current logic would never get to the
+<code>default:</code> case (which I eliminated) or return at the end,
+but we do not mix error handling mechanisms in the same function, so we
+just return an empty optional in the end, even if that should never be
+reached.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>What remains is the main function for interactive use, which just
+calls out to the now testable interaction() function:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&quot;expression.h&quot;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  interaction<span class="op">(</span><span class="bu">std::</span>cin<span class="op">,</span> <span class="bu">std::</span>cout<span class="op">);</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>The full header with the testable API looks like:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#ifndef EXPRESSION_H_</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#define EXPRESSION_H_</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iosfwd&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;optional&gt;</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="kw">enum</span> <span class="kw">class</span> operation <span class="op">:</span> <span class="dt">char</span> <span class="op">{</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  err<span class="op">,</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  res <span class="op">=</span> <span class="ch">&#39;=&#39;</span><span class="op">,</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  add <span class="op">=</span> <span class="ch">&#39;+&#39;</span><span class="op">,</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  sub <span class="op">=</span> <span class="ch">&#39;-&#39;</span><span class="op">,</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  mul <span class="op">=</span> <span class="ch">&#39;*&#39;</span><span class="op">,</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  div <span class="op">=</span> <span class="ch">&#39;/&#39;</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="op">;</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;</span> readNumber<span class="op">(</span><span class="bu">std::</span>istream<span class="op">&amp;);</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>operation readOperation<span class="op">(</span><span class="bu">std::</span>istream<span class="op">&amp;);</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>istream<span class="op"> &amp;</span>clearAndSkipToNewline<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;);</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;</span> apply<span class="op">(</span><span class="dt">double</span><span class="op">,</span> operation<span class="op">,</span> <span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;);</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> interaction<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">,</span> <span class="bu">std::</span>ostream<span class="op"> &amp;</span>out<span class="op">);</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="pp">#endif </span><span class="co">/* EXPRESSION_H_ */</span></span></code></pre></div>
+<p>Note, that we use <code>&lt;iosfwd&gt;</code> to limit dependencies
+for other translation units using this header.</p>
+<p>And the full implementation after my refactoring is:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&quot;expression.h&quot;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;istream&gt;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;optional&gt;</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;ostream&gt;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;string_view&gt;</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;</span> apply<span class="op">(</span><span class="dt">double</span> <span class="at">const</span> lhs<span class="op">,</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>                            operation <span class="at">const</span> oper<span class="op">,</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>                            <span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;</span> rhs<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">using</span> <span class="kw">enum</span> operation<span class="op">;</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span> <span class="op">(</span>oper<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> res<span class="op">:</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">[[</span><span class="at">fallthrough</span><span class="op">]];</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> err<span class="op">:</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs<span class="op">;</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> add<span class="op">:</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs <span class="op">?</span>  lhs <span class="op">+</span> <span class="op">*</span>rhs  <span class="op">:</span> rhs<span class="op">;</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> sub<span class="op">:</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs <span class="op">?</span>  lhs <span class="op">-</span> <span class="op">*</span>rhs  <span class="op">:</span> rhs<span class="op">;</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> mul<span class="op">:</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs <span class="op">?</span>  lhs <span class="op">*</span> <span class="op">*</span>rhs  <span class="op">:</span> rhs<span class="op">;</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> div<span class="op">:</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rhs <span class="op">&amp;&amp;</span> <span class="op">*</span>rhs <span class="op">?</span> lhs <span class="op">/</span> <span class="op">*</span>rhs <span class="op">:</span> <span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;{};</span></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">{};</span> <span class="co">// some logic error occured</span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>optional<span class="op">&lt;</span><span class="dt">double</span><span class="op">&gt;</span> readNumber<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">){</span></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> result<span class="op">{};</span></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>in <span class="op">&gt;&gt;</span> result<span class="op">){</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">{};</span></span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>operation readOperation<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">){</span></span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> ch<span class="op">{};</span></span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">constexpr</span> <span class="bu">std::</span>string_view<span class="op"> </span>opers<span class="op">{</span><span class="st">&quot;=+-*/&quot;</span><span class="op">};</span></span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>in <span class="op">&gt;&gt;</span> ch <span class="op">&amp;&amp;</span> <span class="bu">std::</span>string_view<span class="bu">::</span>npos<span class="op"> !=</span> opers<span class="op">.</span>find<span class="op">(</span>ch<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a>        <span class="co">// c++23: in &gt;&gt; ch &amp;&amp; opers.contains(ch)</span></span>
+<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">static_cast</span><span class="op">&lt;</span>operation<span class="op">&gt;(</span>ch<span class="op">);</span></span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">{};</span></span>
+<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a><span class="bu">std::</span>istream<span class="op"> &amp;</span>clearAndSkipToNewline<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">){</span></span>
+<span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a>    in<span class="op">.</span>clear<span class="op">();</span></span>
+<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span><span class="op">(</span>in <span class="op">&amp;&amp;</span> in<span class="op">.</span>get<span class="op">()</span> <span class="op">!=</span> <span class="ch">&#39;</span><span class="sc">\n</span><span class="ch">&#39;</span><span class="op">);</span></span>
+<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> in<span class="op">;</span></span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> handleResultOrError<span class="op">(</span><span class="dt">double</span> <span class="at">const</span> result<span class="op">,</span></span>
+<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a>                         operation <span class="at">const</span> oper<span class="op">,</span></span>
+<span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a>                         <span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">,</span></span>
+<span id="cb21-52"><a href="#cb21-52" aria-hidden="true" tabindex="-1"></a>                         <span class="bu">std::</span>ostream<span class="op"> &amp;</span>out<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-53"><a href="#cb21-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>oper <span class="op">==</span> operation<span class="op">::</span>res<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-54"><a href="#cb21-54" aria-hidden="true" tabindex="-1"></a>        out <span class="op">&lt;&lt;</span> <span class="st">&quot;Result: &quot;</span> <span class="op">&lt;&lt;</span> result <span class="op">&lt;&lt;</span> <span class="ch">&#39;</span><span class="sc">\n</span><span class="ch">&#39;</span><span class="op">;</span></span>
+<span id="cb21-55"><a href="#cb21-55" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>oper <span class="op">==</span> operation<span class="op">::</span>err<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-56"><a href="#cb21-56" aria-hidden="true" tabindex="-1"></a>        out <span class="op">&lt;&lt;</span> <span class="st">&quot;invalid operator, restarting</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">;</span></span>
+<span id="cb21-57"><a href="#cb21-57" aria-hidden="true" tabindex="-1"></a>        clearAndSkipToNewline<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb21-58"><a href="#cb21-58" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb21-59"><a href="#cb21-59" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb21-60"><a href="#cb21-60" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> interaction<span class="op">(</span><span class="bu">std::</span>istream<span class="op"> &amp;</span>in<span class="op">,</span> <span class="bu">std::</span>ostream<span class="op"> &amp;</span>out<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-61"><a href="#cb21-61" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> result <span class="op">=</span> readNumber<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb21-62"><a href="#cb21-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span><span class="kw">not</span> in<span class="op">.</span>eof<span class="op">()){</span></span>
+<span id="cb21-63"><a href="#cb21-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>result<span class="op">){</span></span>
+<span id="cb21-64"><a href="#cb21-64" aria-hidden="true" tabindex="-1"></a>            <span class="kw">auto</span> <span class="at">const</span> oper <span class="op">=</span> readOperation<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb21-65"><a href="#cb21-65" aria-hidden="true" tabindex="-1"></a>            handleResultOrError<span class="op">(*</span>result<span class="op">,</span> oper<span class="op">,</span> in<span class="op">,</span> out<span class="op">);</span></span>
+<span id="cb21-66"><a href="#cb21-66" aria-hidden="true" tabindex="-1"></a>            result <span class="op">=</span> apply<span class="op">(*</span>result<span class="op">,</span> oper<span class="op">,</span> readNumber<span class="op">(</span>in<span class="op">));</span></span>
+<span id="cb21-67"><a href="#cb21-67" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb21-68"><a href="#cb21-68" aria-hidden="true" tabindex="-1"></a>            clearAndSkipToNewline<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb21-69"><a href="#cb21-69" aria-hidden="true" tabindex="-1"></a>            result <span class="op">=</span> readNumber<span class="op">(</span>in<span class="op">);</span></span>
+<span id="cb21-70"><a href="#cb21-70" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb21-71"><a href="#cb21-71" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb21-72"><a href="#cb21-72" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>One could argue that this file mixes the parsing-I/O part with the
+actual interpretation in the apply function, so for an even better
+physical architecture, one could split those apart into two translation
+units, where only one is dependent on the stream headers. However, due
+to the small size, I refrained from it.</p>
+<p>This concludes my code critique and refactoring. Thanks to Roger for
+the splendid example, especially the use of goto labels in a switch was
+baffling on first sight.</p>
+</body>
+</html>
