@@ -3,6 +3,7 @@
 #include "BoundedBuffer.h"
 #include <stdexcept>
 #include <vector>
+using fixed_size::BoundedBuffer;
 
 
 constexpr auto operator"" _times(unsigned long long n) {

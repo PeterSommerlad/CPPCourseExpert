@@ -2,6 +2,7 @@
 #include "cute.h"
 #include "BoundedBuffer.h"
 
+using heap_non_default::BoundedBuffer;
 
 void test_buffer_constructor_for_capacity_zero_throws() {
 	ASSERT_THROWS(BoundedBuffer<int> buffer{0}, std::invalid_argument);

@@ -5,6 +5,7 @@
 
 #include <utility>
 
+using heap_non_default::BoundedBuffer;
 
 
 void test_buffer_push_copies_element() {

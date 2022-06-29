@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.2083735529/PATH/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.2083735529/PATH/operation=append
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.2083735529/PATH/value=/opt/homebrew/bin\:/usr/local/bin\:/opt/homebrew/bin\:/opt/homebrew/sbin\:/usr/local/bin\:/usr/bin\:/bin\:/usr/sbin\:/sbin\:/Library/TeX/texbin\:/Applications/Little Snitch.app/Contents/Components\:/Library/Apple/usr/bin
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.2083735529/append=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.2083735529/appendContributed=true

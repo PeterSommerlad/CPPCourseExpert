@@ -3,17 +3,7 @@
 #include "BoundedBuffer.h"
 #include <array>
 
-void test_bounded_buffer_value_type_is_value() {
-	ASSERT((std::is_same_v<int, BoundedBuffer<int, 15>::value_type>));
-}
-
-void test_bounded_buffer_reference_type_is_reference() {
-	ASSERT((std::is_same_v<int &,BoundedBuffer<int, 15>::reference> ));
-}
-
-void test_bounded_buffer_const_reference_type_is_const_reference() {
-    ASSERT((std::is_same_v<int const &,BoundedBuffer<int, 15>::const_reference> ));
-}
+using fixed_size::BoundedBuffer;
 
 void test_bounded_buffer_container_type_is_array() {
     ASSERT((std::is_same_v<std::array<int, 15>,BoundedBuffer<int, 15>::container_type> ));
@@ -35,22 +25,22 @@ void test_const_bounded_buffer_type_of_full_is_bool() {
 
 void test_bounded_buffer_front_type_is_reference_type() {
 	BoundedBuffer<int, 15> buffer{};
-    ASSERT((std::is_same_v<decltype(buffer)::reference,decltype(buffer.front())> ));
+    ASSERT((std::is_same_v<int &,decltype(buffer.front())> ));
 }
 
 void test_const_bounded_buffer_front_type_is_const_reference_type() {
 	BoundedBuffer<int, 15> const buffer{};
-    ASSERT((std::is_same_v<decltype(buffer)::const_reference,decltype(buffer.front())> ));
+    ASSERT((std::is_same_v<int const &,decltype(buffer.front())> ));
 }
 
 void test_bounded_buffer_back_type_is_reference_type() {
 	BoundedBuffer<int, 15> buffer{};
-    ASSERT((std::is_same_v<decltype(buffer)::reference,decltype(buffer.back())> ));
+    ASSERT((std::is_same_v<int &,decltype(buffer.back())> ));
 }
 
 void test_const_bounded_buffer_back_type_is_reference_type() {
 	BoundedBuffer<int, 15> const buffer{};
-    ASSERT((std::is_same_v<decltype(buffer)::const_reference,decltype(buffer.back())> ));
+    ASSERT((std::is_same_v<int const &,decltype(buffer.back())> ));
 }
 
 void test_const_bounded_buffer_type_of_size_is_size_type() {
@@ -78,10 +68,7 @@ void test_bounded_buffer_type_of_pop_is_void() {
 
 cute::suite make_suite_bounded_buffer_signatures_suite(){
 	cute::suite s;
-	s.push_back(CUTE(test_bounded_buffer_value_type_is_value));
-	s.push_back(CUTE(test_bounded_buffer_reference_type_is_reference));
 	s.push_back(CUTE(test_bounded_buffer_container_type_is_array));
-	s.push_back(CUTE(test_bounded_buffer_const_reference_type_is_const_reference));
 	s.push_back(CUTE(test_bounded_buffer_size_type_is_size_t));
 	s.push_back(CUTE(test_const_bounded_buffer_type_of_empty_is_bool));
 	s.push_back(CUTE(test_const_bounded_buffer_type_of_full_is_bool));

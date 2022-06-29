@@ -8,6 +8,7 @@
 
 #include <utility>
 #include <vector>
+using heap_memory::BoundedBuffer;
 
 
 struct AllocationTracker {

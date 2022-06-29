@@ -1,8 +1,5 @@
 <testsuites>
-	<testsuite name="BoundedBuffer Signature Tests" tests="16">
-		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_value_type_is_value"/>
-		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_reference_type_is_reference"/>
-		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_const_reference_type_is_const_reference"/>
+	<testsuite name="BoundedBuffer Signature Tests" tests="13">
 		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_size_type_is_size_t"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_const_bounded_buffer_type_of_empty_is_bool"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_const_bounded_buffer_type_of_full_is_bool"/>
@@ -86,7 +83,7 @@
 		<testcase classname="BoundedBuffer Heap Memory Tests" name="test_copy_assignment_one_additional_allocation"/>
 		<testcase classname="BoundedBuffer Heap Memory Tests" name="test_move_assignment_no_additional_allocation"/>
 	</testsuite>
-	<testsuite name="BoundedBuffer Non-Default Constructible Element Tests" tests="9">
+	<testsuite name="BoundedBuffer Non-Default Constructible Element Tests" tests="10">
 		<testcase classname="BoundedBuffer Non-Default Constructible Element Tests" name="test_new_buffer_of_nondefaultconstructible_invokes_no_destructors"/>
 		<testcase classname="BoundedBuffer Non-Default Constructible Element Tests" name="test_element_in_buffer_is_destroyed_once"/>
 		<testcase classname="BoundedBuffer Non-Default Constructible Element Tests" name="test_element_in_moved_buffer_is_destroyed_once"/>
@@ -96,5 +93,6 @@
 		<testcase classname="BoundedBuffer Non-Default Constructible Element Tests" name="test_rvalue_push_moves_element"/>
 		<testcase classname="BoundedBuffer Non-Default Constructible Element Tests" name="test_lvalue_push_must_not_copy_assign"/>
 		<testcase classname="BoundedBuffer Non-Default Constructible Element Tests" name="test_rvalue_push_must_not_move_assign"/>
+		<testcase classname="BoundedBuffer Non-Default Constructible Element Tests" name="test_emplace_works"/>
 	</testsuite>
 </testsuites>

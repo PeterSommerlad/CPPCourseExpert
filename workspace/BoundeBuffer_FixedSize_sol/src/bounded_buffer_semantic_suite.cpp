@@ -2,6 +2,7 @@
 #include "cute.h"
 #include "BoundedBuffer.h"
 #include <utility>
+using fixed_size::BoundedBuffer;
 
 struct MemoryOperationCounter {
 	MemoryOperationCounter() = default;

@@ -1,6 +1,7 @@
 #include "bounded_buffer_default_behavior_suite.h"
 #include "cute.h"
 #include "BoundedBuffer.h"
+using fixed_size::BoundedBuffer;
 
 
 void test_int_buffer_of_capacity_thousand_is_empty() {

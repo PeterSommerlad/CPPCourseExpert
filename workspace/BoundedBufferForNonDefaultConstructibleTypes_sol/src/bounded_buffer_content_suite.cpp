@@ -5,6 +5,7 @@
 #include <stdexcept>
 #include <vector>
 
+using heap_non_default::BoundedBuffer;
 
 using namespace times_literal;
 

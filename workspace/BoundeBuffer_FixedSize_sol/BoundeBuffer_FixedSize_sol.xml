@@ -1,9 +1,6 @@
 <testsuites>
-	<testsuite name="BoundedBuffer Signature Tests" tests="15">
-		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_value_type_is_value"/>
-		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_reference_type_is_reference"/>
+	<testsuite name="BoundedBuffer Signature Tests" tests="12">
 		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_container_type_is_array"/>
-		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_const_reference_type_is_const_reference"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_size_type_is_size_t"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_const_bounded_buffer_type_of_empty_is_bool"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_const_bounded_buffer_type_of_full_is_bool"/>

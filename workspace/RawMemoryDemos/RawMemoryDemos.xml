@@ -1,0 +1,8 @@
+<testsuites>
+	<testsuite name="AllTests" tests="4">
+		<testcase classname="AllTests" name="demo_raw_byte_array_heap"/>
+		<testcase classname="AllTests" name="demo_raw_byte_array_stack"/>
+		<testcase classname="AllTests" name="demo_raw_byte_array_for_overwrite_heap"/>
+		<testcase classname="AllTests" name="demo_object_for_overwrite_heap"/>
+	</testsuite>
+</testsuites>

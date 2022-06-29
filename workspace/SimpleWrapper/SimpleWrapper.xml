@@ -1,0 +1,22 @@
+<testsuites>
+	<testsuite name="AllTests" tests="18">
+		<testcase classname="AllTests" name="with_value::testWithSimpleRegularType"/>
+		<testcase classname="AllTests" name="with_value::testMoveOnlyType"/>
+		<testcase classname="AllTests" name="with_ref::testWithSimpleRegularType"/>
+		<testcase classname="AllTests" name="with_ref::testMoveOnlyType"/>
+		<testcase classname="AllTests" name="with_ref::testReplacement"/>
+		<testcase classname="AllTests" name="with_value::testReplacement"/>
+		<testcase classname="AllTests" name="with_ref::testReplacementwithlvalue"/>
+		<testcase classname="AllTests" name="with_value::testReplacementwithlvalue"/>
+		<testcase classname="AllTests" name="with_forwarding::testWithSimpleRegularType"/>
+		<testcase classname="AllTests" name="with_forwarding::testMoveOnlyType"/>
+		<testcase classname="AllTests" name="with_forwarding::testnonmovable"/>
+		<testcase classname="AllTests" name="with_forwarding::testReplacement"/>
+		<testcase classname="AllTests" name="with_forwarding::testReplacementwithlvalue"/>
+		<testcase classname="AllTests" name="with_forwarding::testWrapItFunction"/>
+		<testcase classname="AllTests" name="with_forwarding::testWrapItFunctionWithCapture"/>
+		<testcase classname="AllTests" name="with_forwarding::testWrapItFunctionWithnon_copyable"/>
+		<testcase classname="AllTests" name="with_forwarding::testNonMovableWithDefaultCtor"/>
+		<testcase classname="AllTests" name="with_forwarding::testNonMovableWith2Arguments"/>
+	</testsuite>
+</testsuites>

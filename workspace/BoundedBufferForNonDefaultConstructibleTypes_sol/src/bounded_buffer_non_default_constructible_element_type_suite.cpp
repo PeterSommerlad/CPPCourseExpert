@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <string>
 #include <utility>
+using heap_non_default::BoundedBuffer;
 
 struct NonDefaultConstructible {
 	explicit NonDefaultConstructible(int) : value{1234} {}
@@ -53,7 +54,6 @@ private:
 	}
 	volatile unsigned value;
 };
-
 
 void resetCounters() {
 	NonDefaultConstructible::nOfCopyConstructions = 0;
@@ -151,6 +151,22 @@ void test_rvalue_push_must_not_move_assign() {
 	ASSERT_EQUAL(0, NonDefaultConstructible::nOfMoveAssignments);
 }
 
+struct NonCopyableNonMovable {
+    NonCopyableNonMovable(int i , double d):i{i},d{d} {}
+    // Rule of DesDeMovA:
+    NonCopyableNonMovable& operator=(NonCopyableNonMovable&&)noexcept = delete;
+    int i;
+    double d;
+};
+
+void test_emplace_works(){
+	BoundedBuffer<NonCopyableNonMovable> buffer{5};
+	buffer.push_emplace(42,3.14);
+	ASSERT_EQUAL(42,buffer.front().i);
+}
+
+
+
 cute::suite make_suite_bounded_buffer_non_default_constructible_element_type_suite(){
 	cute::suite s;
 	s.push_back(CUTE(test_new_buffer_of_nondefaultconstructible_invokes_no_destructors));
@@ -162,6 +178,7 @@ cute::suite make_suite_bounded_buffer_non_default_constructible_element_type_sui
 	s.push_back(CUTE(test_rvalue_push_moves_element));
 	s.push_back(CUTE(test_lvalue_push_must_not_copy_assign));
 	s.push_back(CUTE(test_rvalue_push_must_not_move_assign));
+	s.push_back(CUTE(test_emplace_works));
 	return s;
 }
 

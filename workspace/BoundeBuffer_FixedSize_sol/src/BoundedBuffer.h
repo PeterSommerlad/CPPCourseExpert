@@ -4,30 +4,29 @@
 #include <stdexcept>
 #include <utility>
 
+namespace fixed_size {
+
 template<typename T, size_t N>
 struct BoundedBuffer {
-using value_type = T;
-using reference = T&;
-using const_reference = T const &;
 using container_type = std::array<T,N>;
 using size_type = container_type::size_type;
 
 bool empty() const { return size() == 0; }
 bool full() const { return size() == N; }
 size_type size() const { return count; }
-reference front() & {
+T& front() & {
     throwOnEmpty();
     return elements[first];
 }
-const_reference front() const &{
+T const & front() const &{
     throwOnEmpty();
     return elements[first];
 }
-reference back() &{
+T& back() &{
     throwOnEmpty();
     return elements[back_index()];
 }
-const_reference back() const &{
+T const & back() const &{
     throwOnEmpty();
     return elements[back_index()];
 }
@@ -62,5 +61,5 @@ void throwOnEmpty() const {
 
 };
 
-
+}
 #endif /* BOUNDEDBUFFER_H_ */

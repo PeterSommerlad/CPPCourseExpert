@@ -10,6 +10,7 @@
 #include <utility>
 #include <vector>
 
+using heap_non_default::BoundedBuffer;
 
 struct AllocationTracker {
 	static void* operator new(std::size_t sz) {

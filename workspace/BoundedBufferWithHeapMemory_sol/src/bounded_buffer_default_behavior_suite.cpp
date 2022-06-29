@@ -1,6 +1,7 @@
 #include "bounded_buffer_default_behavior_suite.h"
 #include "cute.h"
 #include "BoundedBuffer.h"
+using heap_memory::BoundedBuffer;
 
 
 void test_buffer_constructor_for_capacity_zero_throws() {
