@@ -1,5 +1,5 @@
 <testsuites>
-	<testsuite name="AllTests" tests="18">
+	<testsuite name="AllTests" tests="26">
 		<testcase classname="AllTests" name="with_value::testWithSimpleRegularType"/>
 		<testcase classname="AllTests" name="with_value::testMoveOnlyType"/>
 		<testcase classname="AllTests" name="with_ref::testWithSimpleRegularType"/>
@@ -18,5 +18,13 @@
 		<testcase classname="AllTests" name="with_forwarding::testWrapItFunctionWithnon_copyable"/>
 		<testcase classname="AllTests" name="with_forwarding::testNonMovableWithDefaultCtor"/>
 		<testcase classname="AllTests" name="with_forwarding::testNonMovableWith2Arguments"/>
+		<testcase classname="AllTests" name="with_raw::testWithSimpleRegularType"/>
+		<testcase classname="AllTests" name="with_raw::testMoveOnlyType"/>
+		<testcase classname="AllTests" name="with_raw::testnonmovable"/>
+		<testcase classname="AllTests" name="with_raw::testReplacement"/>
+		<testcase classname="AllTests" name="with_raw::testReplacementwithlvalue"/>
+		<testcase classname="AllTests" name="with_raw::testNonMovableWithDefaultCtor"/>
+		<testcase classname="AllTests" name="with_raw::testNonMovableWith2Arguments"/>
+		<testcase classname="AllTests" name="with_raw::testDisengagedThrows"/>
 	</testsuite>
 </testsuites>

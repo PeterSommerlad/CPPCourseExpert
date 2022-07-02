@@ -1,0 +1,5 @@
+ch.hsr.ifs.elevator.defaultctor=Warning
+ch.hsr.ifs.elevator.nullMacro=Warning
+ch.hsr.ifs.elevator.uninitialized=Warning
+eclipse.preferences.version=1
+useParentScope=false

@@ -1,3 +1,4 @@
+#include "wrapper_rawstorage_nonmovable.h"
 #include "wrapper.h"
 #include "wrapper_value.h"
 #include "wrapper_nonmovable.h"
@@ -8,6 +9,7 @@
 
 #include <memory>
 #include <sstream>
+#include <stdexcept>
 #include <utility>
 
 
@@ -33,13 +35,13 @@ void testMoveOnlyType(){
     ASSERT_EQUAL(42,*w.value);
 }
 void testReplacement(){
-  wrapper wup{std::make_unique<int>(42)};
+  wrapper<std::unique_ptr<int>> wup{std::make_unique<int>(42)};
   wup.replace(std::unique_ptr<int>{});
   wup.replace(nullptr);
   ASSERT_EQUAL(nullptr,wup.value);
 }
 void testReplacementwithlvalue(){
-  wrapper wup{std::make_unique<int>(42)};
+  wrapper<std::unique_ptr<int>> wup{std::make_unique<int>(42)};
   std::unique_ptr<int> null{};
   //wup.replace(null);  // doesn't compile
   wup.replace(std::move(null));
@@ -64,7 +66,6 @@ void testWithSimpleRegularType() {
 
 void testMoveOnlyType(){
     auto x = std::make_unique<int>(42);
-    using wrapit::wrapper;
     // wrapper<std::unique_ptr<int>> w{x}; // doesn't compile
     wrapper<std::unique_ptr<int>> w{std::move(x)};
 
@@ -76,13 +77,13 @@ void testnonmovable(){
 }
 
 void testReplacement(){
-  wrapper wup{std::make_unique<int>(42)};
+  wrapper<std::unique_ptr<int>> wup{std::make_unique<int>(42)};
   wup.replace(std::unique_ptr<int>{});
   wup.replace(nullptr);
   ASSERT_EQUAL(nullptr,wup.value);
 }
 void testReplacementwithlvalue(){
-  wrapper wup{std::make_unique<int>(42)};
+  wrapper<std::unique_ptr<int>> wup{std::make_unique<int>(42)};
   std::unique_ptr<int> null{};
   //wup.replace(null);  // doesn't compile
   wup.replace(std::move(null)); // internally uses move assignment
@@ -101,7 +102,6 @@ void testWithSimpleRegularType() {
 
 void testMoveOnlyType(){
     auto x = std::make_unique<int>(42);
-    using wrapit::wrapper;
     // wrapper<std::unique_ptr<int>> w{x}; // doesn't compile
     wrapper<std::unique_ptr<int>> w{std::move(x)};
 
@@ -162,6 +162,71 @@ void testNonMovableWith2Arguments(){
 }
 }
 
+namespace with_raw{
+using wrap_raw_nonmovable::wrapper;
+using wrap_raw_nonmovable::wrapit;
+
+void testWithSimpleRegularType() {
+    wrapper<int> wi{42};
+    ASSERT_EQUAL(42,wi.value());
+}
+
+void testMoveOnlyType(){
+    auto x = std::make_unique<int>(42);
+    // wrapper<std::unique_ptr<int>> w{x}; // doesn't compile
+    wrapper<std::unique_ptr<int>> const w{std::move(x)};
+
+    ASSERT_EQUAL(42,*w.value());
+}
+void testnonmovable(){
+    wrapper<nonmovable> w{42};
+    ASSERT_EQUAL(42,w.value().val);
+}
+
+void testReplacement(){
+  wrapper<std::unique_ptr<int>> wup{std::make_unique<int>(42)};
+  wup.replace(std::unique_ptr<int>{});
+  wup.replace(nullptr);
+  ASSERT_EQUAL(nullptr,wup.value());
+}
+void testReplacementwithlvalue(){
+  wrapper<std::unique_ptr<int>> wup{std::make_unique<int>(42)};
+  std::unique_ptr<int> null{};
+  //wup.replace(null);  // doesn't compile
+  wup.replace(std::move(null));
+  ASSERT_EQUAL(nullptr,wup.value());
+}
+struct nmv_def {
+  nmv_def operator=(nmv_def&&)=delete;
+  int get() { return 42; }
+};
+void testNonMovableWithDefaultCtor(){
+  wrapper<nmv_def> w{};
+  ASSERT_EQUAL(42,w.value().get());
+}
+struct nmv_2ref {
+  nmv_2ref(int &i, std::unique_ptr<int> p)
+  : i{i}, up{std::move(p)}{}
+  nmv_2ref(int &i, std::nullptr_t) noexcept
+  : i{i}, up{}{}
+  nmv_2ref operator=(nmv_2ref&&)=delete;
+  int &i;
+  std::unique_ptr<int> up;
+};
+void testNonMovableWith2Arguments(){
+  int i{42};
+  wrapper<nmv_2ref> w{i,std::make_unique<int>(43)};
+  ASSERT_EQUAL(42*43,w.value().i * *w.value().up);
+  w.replace(i,nullptr); // only works because of noexcept
+}
+void testDisengagedThrows(){
+  wrapper<int> w{42};
+  w.forget();
+  ASSERT_THROWS(w.value(),std::logic_error);
+}
+}
+
+
 bool runAllTests(int argc, char const *argv[]) {
 	cute::suite s { };
 	//TODO add your test here
@@ -183,6 +248,14 @@ bool runAllTests(int argc, char const *argv[]) {
 	s.push_back(CUTE(with_forwarding::testWrapItFunctionWithnon_copyable));
 	s.push_back(CUTE(with_forwarding::testNonMovableWithDefaultCtor));
 	s.push_back(CUTE(with_forwarding::testNonMovableWith2Arguments));
+	s.push_back(CUTE(with_raw::testWithSimpleRegularType));
+	s.push_back(CUTE(with_raw::testMoveOnlyType));
+	s.push_back(CUTE(with_raw::testnonmovable));
+	s.push_back(CUTE(with_raw::testReplacement));
+	s.push_back(CUTE(with_raw::testReplacementwithlvalue));
+	s.push_back(CUTE(with_raw::testNonMovableWithDefaultCtor));
+	s.push_back(CUTE(with_raw::testNonMovableWith2Arguments));
+	s.push_back(CUTE(with_raw::testDisengagedThrows));
 	cute::xml_file_opener xmlfile(argc, argv);
 	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
 	auto runner = cute::makeRunner(lis, argc, argv);
