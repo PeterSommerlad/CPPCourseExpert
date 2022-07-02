@@ -25,7 +25,7 @@ Furthermore, your `BoundedBuffer` must feature the following *member types*:
 
 You get test suites for each task. Our recommendation is adding one test at a time. You can start by out-commenting every test. Adding one test will usually result in a red bar. Write just as much code to get the required functionality done (compiles and results in a green bar). Then start over with the next test case.
 
-To start, create a new CUTE project within Cevelop and copy all files provided in this folder. For download convenience I also prepared a zip file that you can download directly
+To start, create a new CUTE project within Cevelop and copy all files provided in this folder. For download convenience I also prepared a [zip file](BoundeBufferFixedSizeTests.zip) that you can download directly.
 
 ## Member Function Definitions (Signatures)
 
