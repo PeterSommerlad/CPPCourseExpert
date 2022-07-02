@@ -116,6 +116,10 @@ see the file [DynArrayTest.cpp](DynArrayTest.cpp) as a potential starting place 
 For the implementation most functions will just forward to the corresponding function of std::vector, except for those, where checking that the vector is not empty is required, or where the behavior (indexing) is adjusted.
 
 The only template parameer of your DynArray class should be the element type.
+
+Note: if you do not have the boost libraries installed, use my header only counter iterator library available as [range_counter.h](https://github.com/PeterSommerlad/CPPCourseAdvanced/raw/main/exercises/solutions/exercise05/range_counter.h) or as 
+[full PSRangeCounter repository](https://github.com/PeterSommerlad/PSRangeCounter) (you'd only need to copy `range_counter.h`)
+
 The same exercise is also part of the C++ Advanced training. The following text is given there (the unit tests are provided here):
 
 ----
