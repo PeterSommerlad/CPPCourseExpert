@@ -111,7 +111,7 @@ For the following tasks write/copy test cases first!
 We will create a generic wrapper class around std::vector that mimics most of its behavior, but is safer to use, because it will always do bounds checking. 
 In addition we allow indexing with negative numbers to index from the end. So the last element in the `dynArray` will have index -1 (in addition to `size()-1`)
 
-see the file DynArrayTest.cpp as a potential starting place for tests required. I recommend that you first comment the test cases and then succeedingly uncomment them and make them work.
+see the file [DynArrayTest.cpp](DynArrayTest.cpp) as a potential starting place for tests required. I recommend that you first comment the test cases and then succeedingly uncomment them and make them work.
 
 For the implementation most functions will just forward to the corresponding function of std::vector, except for those, where checking that the vector is not empty is required, or where the behavior (indexing) is adjusted.
 
