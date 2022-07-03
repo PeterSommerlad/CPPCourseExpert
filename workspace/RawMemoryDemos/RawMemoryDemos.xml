@@ -1,10 +1,12 @@
 <testsuites>
-	<testsuite name="AllTests" tests="6">
+	<testsuite name="AllTests" tests="8">
 		<testcase classname="AllTests" name="demo_raw_byte_array_heap"/>
 		<testcase classname="AllTests" name="demo_raw_byte_array_stack"/>
 		<testcase classname="AllTests" name="demo_raw_byte_array_for_overwrite_heap"/>
 		<testcase classname="AllTests" name="demo_object_for_overwrite_heap"/>
 		<testcase classname="AllTests" name="demo_raw_byte_array_heap_construct_at"/>
 		<testcase classname="AllTests" name="demo_raw_byte_array_stack_construct_at"/>
+		<testcase classname="AllTests" name="demo_raw_memory_pointer_access"/>
+		<testcase classname="AllTests" name="demo_raw_byte_array_heap_pointer_access"/>
 	</testsuite>
 </testsuites>

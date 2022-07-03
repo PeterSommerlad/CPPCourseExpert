@@ -34,10 +34,7 @@ First implement the declarations of `BoundedBuffer`s members, without any logic,
 
 ***Hint:*** If you are unsure about the signatures of the individual member functions you can get inspiration from the standard library. The [`std::queue`](http://en.cppreference.com/w/cpp/container/queue) offers a similar interface to your `BoundedBuffer`.
 
-***Note:*** Some of the tests we provide are not really sensible for a real test scenario. But they will help you to get the signatures of your member functions right. There is a dependency to ***Boost*** (`type_index.h`). Accordingly, you need to have the [Boost library](http://www.boost.org) installed on your system and reference it from your project.
-
-***Attention:*** The `boost` headers offered by the *CUTE* project wizard won't be sufficient, as they have an obsolete version.
-
+***Note:*** Some of the tests we provide are not really sensible for a real test scenario. But they will help you to get the signatures of your member functions right. There is a dependency to ***Boost*** (`type_index.h`). 
 
 ## Behavior of a default-constructed `BoundedBuffer`
 
@@ -49,7 +46,6 @@ First implement the declarations of `BoundedBuffer`s members, without any logic,
 * `back` – throws an exception (`std::logic_error`)
 * `push` – inserts an element. However, you cannot observe this currently and you can ignore actually putting the element into a data strcture for storage. If the `BoundedBuffer` has size `0` and exception (`std::logic_error`) will be thrown, because the buffer is `full()`.
 * `pop` – throws an exception (`std::logic_error`)throws an exception (`std::logic_error`)
-* `swap` – Nothing happens for empty buffer
 
 * ***Test-Suite:*** `bounded_buffer_default_behavior_suite`
 
@@ -75,20 +71,7 @@ Furthermore, there is an additional test suite that ensures the correct use of m
 
 * TestSuite: `bounded_buffer_semantic_suite`
 
-
-## Constructors
-
-So far the implicitly available constructors have been sufficient. Now explicitly implement them yourself. You need to make sure they use the suitable move or copy operations on the elements. The behavior and the tests of your `BoundedBuffer` will not change if you do it correctly. Implement the following special member functions:
-* Default constructor
-* Copy constructor
-* Move constructor
-* Copy assignment operator
-* Move assignment operator
-
-***Note:*** Currently, this task seems rather pointless. Later we will modify the `BoundedBuffer` to facilitate heap memory, this will require the implementation of our own constructors and assignment operators. It will be easier if you already have the correct structure as a starting point then.
-
-
-
+The latter tests are important for future variations of our BoundedBuffer
 
 ## extra: DynArray with std::vector member
 

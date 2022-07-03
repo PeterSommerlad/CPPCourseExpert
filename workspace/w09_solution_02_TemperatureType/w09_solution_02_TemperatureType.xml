@@ -1,0 +1,13 @@
+<testsuites>
+	<testsuite name="AllTests" tests="9">
+		<testcase classname="AllTests" name="waterFreezesAt273Kelvin"/>
+		<testcase classname="AllTests" name="waterFreezesAt0Celcius"/>
+		<testcase classname="AllTests" name="waterFreezesAt32Fahrenheit"/>
+		<testcase classname="AllTests" name="testCelciusToKelvin"/>
+		<testcase classname="AllTests" name="testKelvinToCelcius"/>
+		<testcase classname="AllTests" name="testFahrenheitToCelcius"/>
+		<testcase classname="AllTests" name="testCelciusToFahrenheit"/>
+		<testcase classname="AllTests" name="testKelvinToFahrenheit"/>
+		<testcase classname="AllTests" name="testFahrenheitToKelvin"/>
+	</testsuite>
+</testsuites>

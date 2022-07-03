@@ -1,0 +1,30 @@
+<testsuites>
+	<testsuite name="AllTests" tests="10">
+		<testcase classname="AllTests" name="overtakePedestrianAt10Kph"/>
+		<testcase classname="AllTests" name="overtakePedestrianAt6dot2Mph"/>
+		<testcase classname="AllTests" name="overtakePedestrianAt2dot8Mps"/>
+		<testcase classname="AllTests" name="testConversionFromKphToMph">
+			<failure message="../src/Test.cpp:31 testConversionFromKphToMph: 1.60934_kph == 1.0_mph expected:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Kph&gt;)	but was:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mph&gt;)	">
+testConversionFromKphToMph: 1.60934_kph == 1.0_mph expected:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Kph&gt;)	but was:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mph&gt;)	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="testConversionFromMphToKph">
+			<failure message="../src/Test.cpp:35 testConversionFromMphToKph: 1.0_mph == 1.60934_kph expected:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mph&gt;)	but was:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Kph&gt;)	">
+testConversionFromMphToKph: 1.0_mph == 1.60934_kph expected:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mph&gt;)	but was:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Kph&gt;)	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="testConversionFromKphToMps"/>
+		<testcase classname="AllTests" name="testConversionFromMpsToKph"/>
+		<testcase classname="AllTests" name="testConversionFromMphToMps">
+			<failure message="../src/Test.cpp:47 testConversionFromMphToMps: 2.23694_mph == 1.0_mps expected:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mph&gt;)	but was:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mps&gt;)	">
+testConversionFromMphToMps: 2.23694_mph == 1.0_mps expected:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mph&gt;)	but was:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mps&gt;)	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="testConversionFromMpsToMph">
+			<failure message="../src/Test.cpp:51 testConversionFromMpsToMph: 1.0_mps == 2.23694_mph expected:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mps&gt;)	but was:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mph&gt;)	">
+testConversionFromMpsToMph: 1.0_mps == 2.23694_mph expected:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mps&gt;)	but was:	no operator&lt;&lt;(ostream&amp;, velocity::Speed&lt;velocity::tags::Mph&gt;)	
+			</failure>
+		</testcase>
+		<testcase classname="AllTests" name="testSelfEquality"/>
+	</testsuite>
+</testsuites>

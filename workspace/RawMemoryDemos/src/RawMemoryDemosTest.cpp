@@ -58,6 +58,24 @@ void demo_object_for_overwrite_heap(){
   // struct is not destroyed, memory released
 }
 
+void demo_raw_memory_pointer_access(){
+  alignas(demo) std::array<std::byte, sizeof(demo)>  buf;
+  auto ptr = reinterpret_cast<demo*>(&buf[0]);
+  std::construct_at(ptr,42,3.14); // not using result
+  auto ptr2 = std::launder(reinterpret_cast<demo*>(&buf[0]));
+  ASSERT_EQUAL(42*3.14 , ptr2->i * ptr2->d);
+  ptr2->~demo();
+}
+void demo_raw_byte_array_heap_pointer_access(){
+  auto buf{std::make_unique<std::byte[]>(sizeof(demo))};
+  auto ptr{reinterpret_cast<demo*>(&buf[0])};
+  std::construct_at(ptr,42,3.14);
+  auto ptr2{reinterpret_cast<demo*>(&buf[0])};
+  ASSERT_EQUAL(42*3.14 , ptr2->i * ptr2->d);
+  std::destroy_at(ptr2);
+}
+
+
 
 bool runAllTests(int argc, char const *argv[]) {
 	cute::suite s { };
@@ -68,6 +86,8 @@ bool runAllTests(int argc, char const *argv[]) {
 	s.push_back(CUTE(demo_object_for_overwrite_heap));
 	s.push_back(CUTE(demo_raw_byte_array_heap_construct_at));
 	s.push_back(CUTE(demo_raw_byte_array_stack_construct_at));
+	s.push_back(CUTE(demo_raw_memory_pointer_access));
+	s.push_back(CUTE(demo_raw_byte_array_heap_pointer_access));
 	cute::xml_file_opener xmlfile(argc, argv);
 	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
 	auto runner = cute::makeRunner(lis, argc, argv);

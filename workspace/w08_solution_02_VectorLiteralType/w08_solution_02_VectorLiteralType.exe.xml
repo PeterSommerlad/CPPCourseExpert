@@ -1,0 +1,17 @@
+<testsuites>
+	<testsuite name="AllTests" tests="13">
+		<testcase classname="AllTests" name="testCreateVectorWithSingleElement"/>
+		<testcase classname="AllTests" name="testCreateVectorWithTwoElements"/>
+		<testcase classname="AllTests" name="testCreateVectorWithoutElements"/>
+		<testcase classname="AllTests" name="testAccessOutOfBoundsThrows"/>
+		<testcase classname="AllTests" name="testDeduceTemplateArguments"/>
+		<testcase classname="AllTests" name="testAllowModificationOfNonConstElement"/>
+		<testcase classname="AllTests" name="testCalculateLengthOfZeroVector"/>
+		<testcase classname="AllTests" name="testCalculateLength"/>
+		<testcase classname="AllTests" name="testCalculateLengthOfUnitVector"/>
+		<testcase classname="AllTests" name="testEqualityComparison"/>
+		<testcase classname="AllTests" name="testUnequalityComparision"/>
+		<testcase classname="AllTests" name="testOutputOperator"/>
+		<testcase classname="AllTests" name="testScalarProduct"/>
+	</testsuite>
+</testsuites>

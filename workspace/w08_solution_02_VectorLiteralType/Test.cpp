@@ -95,7 +95,7 @@ void testOutputOperator() {
 	ASSERT_EQUAL("(1.1, 2.5, 3.3)", out.str());
 }
 
-void testScalarProduct() {
+void testInnerProduct() {
 	constexpr Vector lhs{1.0, 2.0, 3.0, 4.0};
 	constexpr Vector rhs{4.2, 1.1, 0.0, 9.5};
 	constexpr double expected = 44.4;
@@ -122,7 +122,7 @@ bool runAllTests(int argc, char const *argv[]) {
 	s.push_back(CUTE(testEqualityComparison));
 	s.push_back(CUTE(testUnequalityComparision));
 	s.push_back(CUTE(testOutputOperator));
-	s.push_back(CUTE(testScalarProduct));
+	s.push_back(CUTE(testInnerProduct));
 	cute::xml_file_opener xmlfile(argc, argv);
 	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
 	auto runner = cute::makeRunner(lis, argc, argv);
