@@ -1,6 +1,6 @@
 # Exercise 7: Dynamic Polymorphism
 
-Here we will pick up an exercise from C++ Introduction course and solve it using the type erasure approach, so that extensions just need to provide free functions for the features asked for and `virtual`{.cpp } is tightly encapsulated. For the test cases you can try to adapt the ones provided in the solution part for the last exercise at [https://github.com/PeterSommerlad/CPPCourseIntroduction](https://github.com/PeterSommerlad/CPPCourseIntroduction)
+Here we will pick up an exercise from C++ Introduction course and solve it using the type erasure approach, so that extensions just need to provide free functions for the features asked for and `virtual` is tightly encapsulated. For the test cases you can try to adapt the ones provided in the solution part for the last exercise at [https://github.com/PeterSommerlad/CPPCourseIntroduction](https://github.com/PeterSommerlad/CPPCourseIntroduction)
 
 ## Support garden planning
 
