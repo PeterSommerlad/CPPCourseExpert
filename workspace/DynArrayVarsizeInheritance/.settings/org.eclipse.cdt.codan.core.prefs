@@ -14,19 +14,19 @@ ch.hsr.ifs.cute.mockator.problems.WrapFunctionProblem=-Info
 ch.hsr.ifs.cute.mockator.problems.WrapFunctionProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Manage wrapped function\\")"}
 ch.hsr.ifs.cute.ui.problems.unregisteredTestMarker=Warning
 ch.hsr.ifs.cute.ui.problems.unregisteredTestMarker.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Unregistered Test Marker\\")"}
-com.cevelop.charwars.problems.ArrayProblem=-Warning
+com.cevelop.charwars.problems.ArrayProblem=Warning
 com.cevelop.charwars.problems.ArrayProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Use std\:\:array instead of C-Array.\\")"}
-com.cevelop.charwars.problems.CStrProblem=-Warning
+com.cevelop.charwars.problems.CStrProblem=Warning
 com.cevelop.charwars.problems.CStrProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Use different overload that can take std\:\:string directly.\\")"}
-com.cevelop.charwars.problems.CStringAliasProblem=-Warning
+com.cevelop.charwars.problems.CStringAliasProblem=Warning
 com.cevelop.charwars.problems.CStringAliasProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Use std\:\:string\:\:size_type instead of C-String alias.\\")"}
-com.cevelop.charwars.problems.CStringCleanupProblem=-Warning
+com.cevelop.charwars.problems.CStringCleanupProblem=Warning
 com.cevelop.charwars.problems.CStringCleanupProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Use std\:\:string member functions instead of <cstring> functions.\\")"}
-com.cevelop.charwars.problems.CStringParameterProblem=-Warning
+com.cevelop.charwars.problems.CStringParameterProblem=Warning
 com.cevelop.charwars.problems.CStringParameterProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Use std\:\:string parameter instead of C-String parameter.\\")"}
-com.cevelop.charwars.problems.CStringProblem=-Warning
+com.cevelop.charwars.problems.CStringProblem=Warning
 com.cevelop.charwars.problems.CStringProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Use std\:\:string instead of C-Strings.\\")"}
-com.cevelop.charwars.problems.PointerParameterProblem=-Warning
+com.cevelop.charwars.problems.PointerParameterProblem=Warning
 com.cevelop.charwars.problems.PointerParameterProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Use reference parameters instead of pointer parameters.\\")"}
 com.cevelop.codeanalysator.autosar.info.donotnestlambdas=-Info
 com.cevelop.codeanalysator.autosar.info.donotnestlambdas.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"A05-01-08\: Lambda expressions should not be defined inside another lambda expression\\")"}
@@ -133,7 +133,7 @@ com.cevelop.codeanalysator.misra.problem.boolexpressionoperands.params={launchMo
 com.cevelop.codeanalysator.misra.problem.declareloopvariableintheintializer=-Warning
 com.cevelop.codeanalysator.misra.problem.declareloopvariableintheintializer.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"M03-04-01\: An identifier declared to be an object or type shall be defined in a block that minimizes its visbility.\\")"}
 com.cevelop.constificator.problems.MissingQualification=Warning
-com.cevelop.constificator.problems.MissingQualification.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Missing const-qualification\\")",checkLocalVariables\=>true,checkFunctionParameters\=>true,checkMemberFunctions\=>true,checkDataMembers\=>true}
+com.cevelop.constificator.problems.MissingQualification.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Missing const-qualification\\")",checkLocalVariables\=>true,checkFunctionParameters\=>false,checkMemberFunctions\=>true,checkDataMembers\=>true}
 com.cevelop.constificator.problems.PotentiallyMissingQualification=-Info
 com.cevelop.constificator.problems.PotentiallyMissingQualification.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Possibly missing const-qualification\\")",checkLocalVariables\=>true,checkFunctionParameters\=>true,checkMemberFunctions\=>true,checkDataMembers\=>true}
 com.cevelop.ctylechecker.problems.cincout=Warning
@@ -391,4 +391,3 @@ org.eclipse.cdt.codan.internal.checkers.VariableResolutionProblem=-Error
 org.eclipse.cdt.codan.internal.checkers.VariableResolutionProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Symbol is not resolved\\")"}
 org.eclipse.cdt.codan.internal.checkers.VirtualMethodCallProblem=-Error
 org.eclipse.cdt.codan.internal.checkers.VirtualMethodCallProblem.params={launchModes\=>{RUN_ON_FULL_BUILD\=>true,RUN_ON_INC_BUILD\=>true,RUN_ON_FILE_OPEN\=>false,RUN_ON_FILE_SAVE\=>false,RUN_AS_YOU_TYPE\=>true,RUN_ON_DEMAND\=>true},suppression_comment\=>"@suppress(\\"Virtual method call in constructor/destructor\\")"}
-useParentScope=false

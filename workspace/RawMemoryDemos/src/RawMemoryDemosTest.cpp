@@ -70,7 +70,7 @@ void demo_raw_byte_array_heap_pointer_access(){
   auto buf{std::make_unique<std::byte[]>(sizeof(demo))};
   auto ptr{reinterpret_cast<demo*>(&buf[0])};
   std::construct_at(ptr,42,3.14);
-  auto ptr2{reinterpret_cast<demo*>(&buf[0])};
+  auto ptr2{std::launder(reinterpret_cast<demo*>(&buf[0]))};
   ASSERT_EQUAL(42*3.14 , ptr2->i * ptr2->d);
   std::destroy_at(ptr2);
 }
