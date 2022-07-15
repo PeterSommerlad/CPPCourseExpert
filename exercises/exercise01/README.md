@@ -117,7 +117,7 @@ For the implementation we will adapt `std::vector` by (privately) inheriting fro
 
 The only template parameter of your DynArray class should be the element type.
 
-Note: if you do not have the boost libraries installed, use my header only counter iterator library available as [range_counter.h](https://github.com/PeterSommerlad/CPPCourseAdvanced/raw/main/exercises/exercise05/solution/range_counter.h) or as 
+Note:This test uses my header only counter iterator library available as [range_counter.h](range_counter.h) or as 
 [full PSRangeCounter repository](https://github.com/PeterSommerlad/PSRangeCounter) (you'd only need to copy `range_counter.h`)
 
 A almost identical exercise is also part of the C++ Advanced training. The following text is given there (the unit tests asked for are provided here for you):
