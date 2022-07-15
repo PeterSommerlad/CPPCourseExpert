@@ -80,6 +80,10 @@ public:
     using Base::crbegin;
     using Base::crend;
     using Base::resize;
+#ifndef __clang__
+    DynArray(std::initializer_list<T> l)
+    : Base::vector(l){}
+#endif
 private:
     void throw_if_empty() const {
         if (empty())
@@ -94,9 +98,10 @@ private:
     }
 
 };
-
+#ifdef __clang__
 template<typename T>
 DynArray(std::initializer_list<T>) -> DynArray<T>;
+#endif /* not preferred by gcc 11 in C++17 mode */
 template<typename T>
 DynArray(size_t, T const &) -> DynArray<T>;
 
