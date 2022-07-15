@@ -4,7 +4,7 @@
 #include "xml_listener.h"
 #include "cute_runner.h"
 
-#include <boost/iterator/counting_iterator.hpp>
+#include "range_counter.h"
 #include <optional>
 #include <string>
 
@@ -24,9 +24,10 @@ void initializerlistconstructeddynArrayisNotEmpty() {
 }
 
 void rangeconstructeddynArray() {
-    auto iter = boost::make_counting_iterator(0.0);
-    auto e = boost::make_counting_iterator(11.0);
-    DynArray<double> const da(iter, e);	//Sol : Template argument cannot be omitted, a deduction guide is missing
+    using namespace ps_counter;
+    auto iter = iterator{0};
+    auto e = iterator{11};
+    DynArray<double> const da(iter, e);	//Sol : Template argument cannot be omitted
     ASSERT_EQUAL(11, da.size());
     ASSERT_EQUAL(1.0, da.at(1));
     ASSERT_EQUAL(10.0, da.at(-1));
