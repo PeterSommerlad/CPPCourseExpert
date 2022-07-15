@@ -1,2 +1,5 @@
 # CPPCourseExpert
-Handouts, Exercises, and Source Code Examples for C++ Expert course
+
+* [Handouts](./CppExpert.pdf)
+* [Exercises](./exercises)
+* and Source Code Examples for C++ Expert course
