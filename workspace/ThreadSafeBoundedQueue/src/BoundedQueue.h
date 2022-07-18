@@ -100,7 +100,6 @@ struct BoundedQueue {
 	}
 
 	T pop() {
-		//TODO: Implement
         std::unique_lock guard(mutex);
         is_not_empty.wait(guard,[this](){ return !buffer.empty();});
         auto result = std::move(buffer.front());

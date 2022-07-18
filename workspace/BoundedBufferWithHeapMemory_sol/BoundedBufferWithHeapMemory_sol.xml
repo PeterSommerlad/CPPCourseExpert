@@ -1,5 +1,5 @@
 <testsuites>
-	<testsuite name="BoundedBuffer Signature Tests" tests="12">
+	<testsuite name="BoundedBuffer Signature Tests" tests="13">
 		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_size_type_is_size_t"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_const_bounded_buffer_type_of_empty_is_bool"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_const_bounded_buffer_type_of_full_is_bool"/>
@@ -12,6 +12,7 @@
 		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_type_of_push_of_rvalue_is_void"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_type_of_pop_is_void"/>
 		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_type_of_swap_is_void"/>
+		<testcase classname="BoundedBuffer Signature Tests" name="test_bounded_buffer_namespace_swap_exists"/>
 	</testsuite>
 	<testsuite name="BoundedBuffer Default Behavior Tests" tests="11">
 		<testcase classname="BoundedBuffer Default Behavior Tests" name="test_int_buffer_of_capacity_thousand_is_empty"/>

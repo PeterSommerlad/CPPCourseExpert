@@ -3,6 +3,7 @@
 #include "BoundedBuffer.h"
 
 using heap_memory::BoundedBuffer;
+using BPI=BoundedBuffer<int>;
 
 
 void test_bounded_buffer_size_type_is_size_t() {
@@ -46,25 +47,36 @@ void test_const_bounded_buffer_type_of_size_is_size_type() {
 
 void test_bounded_buffer_type_of_push_of_const_lvalue_is_void() {
 	BoundedBuffer<int> buffer{15};
-	int const lvalue{23};
-    ASSERT((std::is_same_v<void,decltype(buffer.push(lvalue))> ));
+	int lvalue{23};
+  ASSERT((std::is_same_v<void,decltype(buffer.push(lvalue))> ));
+// check exact signature:
+//  ASSERT((std::is_same_v<void(BPI::*)(int const&)&,decltype(static_cast<void (BPI::*)(int const &)&>(&BPI::push))>));
 }
 
 void test_bounded_buffer_type_of_push_of_rvalue_is_void() {
 	BoundedBuffer<int> buffer{15};
     ASSERT((std::is_same_v<void,decltype(buffer.push(23))> ));
+// check exact signature:
+//  ASSERT((std::is_same_v<void(BPI::*)(int &&)&,decltype(static_cast<void (BPI::*)(int &&)&>(&BPI::push))>));
 }
 
 void test_bounded_buffer_type_of_pop_is_void() {
 	BoundedBuffer<int> buffer{15};
     ASSERT((std::is_same_v<void,decltype(buffer.pop())> ));
+    // check exact signature:
+    //ASSERT((std::is_same_v<void(BPI::*)()&,decltype(&BPI::pop)>));
 }
 
 void test_bounded_buffer_type_of_swap_is_void() {
 	BoundedBuffer<int> buffer{15}, other_buffer{15};
     ASSERT((std::is_same_v<void,decltype(buffer.swap(other_buffer))> ));
+    // check exact signature:
+    //  ASSERT((std::is_same_v<void(BPI::*)(BPI&)& noexcept,decltype(&BPI::swap)>));
 }
 
+void test_bounded_buffer_namespace_swap_exists(){
+  ASSERT((std::is_same_v<void (*)(BPI&,BPI&)noexcept, decltype(&heap_memory::swap<int>)>));
+}
 
 cute::suite make_suite_bounded_buffer_signatures_suite(){
 	cute::suite s;
@@ -80,6 +92,7 @@ cute::suite make_suite_bounded_buffer_signatures_suite(){
 	s.push_back(CUTE(test_bounded_buffer_type_of_push_of_rvalue_is_void));
 	s.push_back(CUTE(test_bounded_buffer_type_of_pop_is_void));
 	s.push_back(CUTE(test_bounded_buffer_type_of_swap_is_void));
+	s.push_back(CUTE(test_bounded_buffer_namespace_swap_exists));
 	return s;
 }
 

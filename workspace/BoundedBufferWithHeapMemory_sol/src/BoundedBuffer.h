@@ -25,7 +25,7 @@ BoundedBuffer(BoundedBuffer const &other)
 BoundedBuffer& operator=(BoundedBuffer const &other) & {
   if (this!= &other){
     BoundedBuffer tmp{other};
-    tmp->swap(*this);
+    this->swap(tmp);
   }
   return *this;
 }
@@ -93,7 +93,7 @@ size_type count {0};
 size_type maxsz {0};
 std::unique_ptr<T[]> elements{};
 
-size_type checkForZero(size_type max){
+static size_type checkForZero(size_type max){
     if (0u == max){
         throw std::invalid_argument{"BoundedBuffer: zero size"};
     }
@@ -105,13 +105,19 @@ size_type back_index() const {
 void throwOnEmpty() const {
     if (empty()) throw std::logic_error{"buffer empty"};
 }
-void append_elements(BoundedBuffer const &other){
+void append_elements(BoundedBuffer const &other) & {
     for(size_t index=0; index < other.size(); ++index){
         this->push(other.elements[(other.first+index)%other.maxsz]);
     }
 }
 
 };
+
+template<typename T>
+void swap(BoundedBuffer<T> & l, BoundedBuffer<T> &r) noexcept{
+  l->swap(r);
+}
+
 
 }
 

@@ -122,7 +122,10 @@ void test_copy_self_assignment_no_additional_allocation() {
 	BoundedBuffer<AllocationTracker> buffer { 3 };
 	buffer.push(AllocationTracker{});
 	buffer.push(AllocationTracker{});
-	buffer = (buffer);
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wself-assign-overloaded"
+  buffer = (buffer);
+#pragma clang diagnostic pop
 	ASSERT_EQUAL(1, AllocationTracker::allocatedArrays.size());
 }
 
@@ -131,7 +134,10 @@ void test_move_self_assignment_no_addtional_allocation() {
 	BoundedBuffer<AllocationTracker> buffer { 3 };
 	buffer.push(AllocationTracker{});
 	buffer.push(AllocationTracker{});
-	buffer = std::move(buffer);
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wself-move"
+  buffer = std::move(buffer);
+#pragma clang diagnostic pop
 	ASSERT_EQUAL(1, AllocationTracker::allocatedArrays.size());
 }
 
