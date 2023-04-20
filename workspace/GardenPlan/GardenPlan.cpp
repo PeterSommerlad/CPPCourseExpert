@@ -25,7 +25,7 @@ void printPlan(GardenPlan const & plan, ostream & out){
 
 template<typename F>
 auto mapReduce(GardenPlan const & plan, F const & function) {
-	return accumulate(plan.begin(), plan.end(), 0, [&function](auto lhs, auto rhs) {
+	return accumulate(plan.begin(), plan.end(), decltype(function(*plan.begin())){}, [&function](auto lhs, auto rhs) {
 		return lhs + function(rhs);
 	});
 }
