@@ -28,6 +28,7 @@ For your convenience, test cases for BoundedQueue are provided [here](BoundedQue
 * Why does it not make sense to use `front()` and `back()` member functions for a thread-safe container?
 * Why is it difficult to provide iterators for a thread-safe container?
 * Why is `BoundedQueue::pop()` returning a `T` by value compared to the `void` return type of `BoundedBuffer::pop()`.
+* Does supporting copy and move operations really make sense for a BoundedQueue? What would be a more appropriate Manager category for it, since it is intended to be shared across threads by reference?
 
 
 ## Optional - CVU Student Critique 
