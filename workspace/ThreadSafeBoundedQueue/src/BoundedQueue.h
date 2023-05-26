@@ -15,7 +15,7 @@ template<typename T, typename MUTEX=std::mutex, typename CONDVAR=std::condition_
 struct BoundedQueue {
 
 	//TODO: Add member types
-    using size_type = BoundedBuffer<T>::size_type;
+    using size_type = typename BoundedBuffer<T>::size_type;
 
 	//TODO: Add constructors
     explicit

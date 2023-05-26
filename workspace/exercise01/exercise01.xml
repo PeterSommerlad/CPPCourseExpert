@@ -1,0 +1,11 @@
+<testsuites>
+	<testsuite name="AllTests" tests="7">
+		<testcase classname="AllTests" name="exercise01_1"/>
+		<testcase classname="AllTests" name="exercise01_2"/>
+		<testcase classname="AllTests" name="exercise01_3"/>
+		<testcase classname="AllTests" name="templ_04::exercise01_4"/>
+		<testcase classname="AllTests" name="templ_04::exercise01_5"/>
+		<testcase classname="AllTests" name="templ_04::exercise01_81"/>
+		<testcase classname="AllTests" name="templ_04::exercise01_82"/>
+	</testsuite>
+</testsuites>

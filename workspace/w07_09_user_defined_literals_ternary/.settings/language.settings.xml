@@ -5,26 +5,26 @@
 			<provider copy-of="extension" id="org.eclipse.cdt.ui.UserLanguageSettingsProvider"/>
 			<provider-reference id="org.eclipse.cdt.core.ReferencedProjectsLanguageSettingsProvider" ref="shared-provider"/>
 			<provider-reference id="org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider" ref="shared-provider"/>
-			<provider class="org.eclipse.cdt.managedbuilder.internal.language.settings.providers.GCCBuiltinSpecsDetectorMinGW" console="false" env-hash="-1341724018446452951" id="org.eclipse.cdt.managedbuilder.core.GCCBuiltinSpecsDetectorMinGW" keep-relative-paths="false" name="CDT GCC Built-in Compiler Settings MinGW" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot; -std=c++1y" store-entries-with-project="true">
+			<provider class="org.eclipse.cdt.managedbuilder.internal.language.settings.providers.GCCBuiltinSpecsDetectorMinGW" console="false" env-hash="-1340876101720628951" id="org.eclipse.cdt.managedbuilder.core.GCCBuiltinSpecsDetectorMinGW" keep-relative-paths="false" name="CDT GCC Built-in Compiler Settings MinGW" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot; -std=c++1y" store-entries-with-project="true">
 				<language-scope id="org.eclipse.cdt.core.gcc"/>
 				<language-scope id="org.eclipse.cdt.core.g++"/>
 				<language id="org.eclipse.cdt.core.g++">
 					<entry kind="includePath" name="/usr/local/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1">
+					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include">
+					<entry kind="includePath" name="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include">
+					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="includePath" name="/Library/Developer/CommandLineTools/usr/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/System/Library/Frameworks">
+					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks">
 						<flag value="BUILTIN|READONLY|FRAMEWORK"/>
 					</entry>
 					<entry kind="macro" name="_LP64" value="1">
@@ -198,10 +198,10 @@
 					<entry kind="macro" name="__BIGGEST_ALIGNMENT__" value="8">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__BIGGEST_ALIGNMENT__" value="4294967295U">
+					<entry kind="macro" name="__BLOCKS__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__BLOCKS__" value="1">
+					<entry kind="macro" name="__BLOCKS__" value="&quot;o&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__BYTE_ORDER__" value="__ORDER_LITTLE_ENDIAN__">
@@ -1032,9 +1032,6 @@
 					<entry kind="macro" name="__UINT_FAST32_FMTX__" value="&quot;X&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__UINT_FAST32_FMTo__" value="&quot;o&quot;">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__UINT_FAST32_FMTu__" value="&quot;u&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -1113,6 +1110,9 @@
 					<entry kind="macro" name="__UINT_LEAST32_FMTx__" value="&quot;x&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__UINT_LEAST32_MAX__" value="4294967295U">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__UINT_LEAST32_TYPE__" value="unsigned int">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -1155,7 +1155,7 @@
 					<entry kind="macro" name="__USER_LABEL_PREFIX__" value="_">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__VERSION__" value="&quot;Apple LLVM 13.1.6 (clang-1316.0.21.2.5)&quot;">
+					<entry kind="macro" name="__VERSION__" value="&quot;Apple LLVM 14.0.0 (clang-1400.0.29.202)&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__WCHAR_MAX__" value="2147483647">
@@ -1179,7 +1179,7 @@
 					<entry kind="macro" name="__aarch64__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__apple_build_version__" value="13160021">
+					<entry kind="macro" name="__apple_build_version__" value="14000029">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__arm64" value="1">
@@ -1197,16 +1197,16 @@
 					<entry kind="macro" name="__clang_literal_encoding__" value="&quot;UTF-8&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__clang_major__" value="13">
+					<entry kind="macro" name="__clang_major__" value="14">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__clang_minor__" value="1">
+					<entry kind="macro" name="__clang_minor__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__clang_patchlevel__" value="6">
+					<entry kind="macro" name="__clang_patchlevel__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__clang_version__" value="&quot;13.1.6 (clang-1316.0.21.2.5)&quot;">
+					<entry kind="macro" name="__clang_version__" value="&quot;14.0.0 (clang-1400.0.29.202)&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__clang_wide_literal_encoding__" value="&quot;UTF-32&quot;">
@@ -1344,26 +1344,26 @@
 			<provider copy-of="extension" id="org.eclipse.cdt.ui.UserLanguageSettingsProvider"/>
 			<provider-reference id="org.eclipse.cdt.core.ReferencedProjectsLanguageSettingsProvider" ref="shared-provider"/>
 			<provider-reference id="org.eclipse.cdt.managedbuilder.core.MBSLanguageSettingsProvider" ref="shared-provider"/>
-			<provider class="org.eclipse.cdt.managedbuilder.internal.language.settings.providers.GCCBuiltinSpecsDetectorMinGW" console="false" env-hash="-1341724018446452951" id="org.eclipse.cdt.managedbuilder.core.GCCBuiltinSpecsDetectorMinGW" keep-relative-paths="false" name="CDT GCC Built-in Compiler Settings MinGW" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot; -std=c++1y" store-entries-with-project="true">
+			<provider class="org.eclipse.cdt.managedbuilder.internal.language.settings.providers.GCCBuiltinSpecsDetectorMinGW" console="false" env-hash="-1340876101720628951" id="org.eclipse.cdt.managedbuilder.core.GCCBuiltinSpecsDetectorMinGW" keep-relative-paths="false" name="CDT GCC Built-in Compiler Settings MinGW" parameter="${COMMAND} ${FLAGS} -E -P -v -dD &quot;${INPUTS}&quot; -std=c++1y" store-entries-with-project="true">
 				<language-scope id="org.eclipse.cdt.core.gcc"/>
 				<language-scope id="org.eclipse.cdt.core.g++"/>
 				<language id="org.eclipse.cdt.core.g++">
 					<entry kind="includePath" name="/usr/local/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1">
+					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include">
+					<entry kind="includePath" name="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include">
+					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="includePath" name="/Library/Developer/CommandLineTools/usr/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/System/Library/Frameworks">
+					<entry kind="includePath" name="/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/System/Library/Frameworks">
 						<flag value="BUILTIN|READONLY|FRAMEWORK"/>
 					</entry>
 					<entry kind="macro" name="_LP64" value="1">
@@ -2494,7 +2494,7 @@
 					<entry kind="macro" name="__USER_LABEL_PREFIX__" value="_">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__VERSION__" value="&quot;Apple LLVM 13.1.6 (clang-1316.0.21.2.5)&quot;">
+					<entry kind="macro" name="__VERSION__" value="&quot;Apple LLVM 14.0.0 (clang-1400.0.29.202)&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__WCHAR_MAX__" value="2147483647">
@@ -2518,7 +2518,7 @@
 					<entry kind="macro" name="__aarch64__" value="1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__apple_build_version__" value="13160021">
+					<entry kind="macro" name="__apple_build_version__" value="14000029">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__arm64" value="1">
@@ -2536,16 +2536,16 @@
 					<entry kind="macro" name="__clang_literal_encoding__" value="&quot;UTF-8&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__clang_major__" value="13">
+					<entry kind="macro" name="__clang_major__" value="14">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__clang_minor__" value="1">
+					<entry kind="macro" name="__clang_minor__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__clang_patchlevel__" value="6">
+					<entry kind="macro" name="__clang_patchlevel__" value="0">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__clang_version__" value="&quot;13.1.6 (clang-1316.0.21.2.5)&quot;">
+					<entry kind="macro" name="__clang_version__" value="&quot;14.0.0 (clang-1400.0.29.202)&quot;">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__clang_wide_literal_encoding__" value="&quot;UTF-32&quot;">

@@ -9,7 +9,7 @@ namespace fixed_size {
 template<typename T, size_t N>
 struct BoundedBuffer {
 using container_type = std::array<T,N>;
-using size_type = container_type::size_type;
+using size_type = typename container_type::size_type;
 
 bool empty() const { return size() == 0; }
 bool full() const { return size() == N; }
