@@ -73,6 +73,12 @@ Furthermore, there is an additional test suite that ensures the correct use of m
 
 The latter tests are important for future variations of our BoundedBuffer
 
+
+If you do not want to set up your own IDE or Cevelop with the test cases, you can work on compiler explorer. Please note that you need to uncomment test by test and implement BoundedBuffer.h accordingly to the failing test cases. If you feel you need more tests for it, please add those to the `bounded_buffer_student_suite.cpp`
+
+[BoundedBufferFixedSize Compiler Explorer](https://godbolt.org/z/r1hYhMn4z)
+
+
 ## extra: DynArray with std::vector member
 
 If you want to exercise implementing forwarding functions (`push_back()`) overloads and constructor templates, change the implementation of your DynArray from [exercise01](../exercise01) to use a data member for the std::vector and implement all member function overloads that previously were introduced through using declarations yourself.
