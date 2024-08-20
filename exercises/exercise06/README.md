@@ -30,6 +30,10 @@ Implement the following features:
   * Is it possible to check that the compilation fails when initializing a `Vector` with different types through a succeeding test? (tricky but doable)
 
 
+If you do not want to set up your IDE with CUTE or use Cevelop, here is a compiler explorer environment for you to work with: 
+
+[Compiler Explorer VectorTest](https://godbolt.org/z/WErKeheaj)
+
 ## Strong Unit Types: Conversion with Tags and Traits
 
 Implement a `Temperature` literal type. The `Temperature` type shall be taggable with the units `Kelvin`, `Celcius` and `Fahrenheit` similar to what was shown wrt. Speed on the slides.
