@@ -44,3 +44,7 @@ Implement a `Temperature` literal type. The `Temperature` type shall be taggable
 * Add user defined literal operators (`_K`, `_C`, `_F`) to the `unit::literals` namespace.
 
 ***Note:*** The provided tests for this exercies do not contain test cases for all operations above add them yourself.
+
+If you do not want to set up your IDE with CUTE or use Cevelop, here is a compiler explorer environment for you to work with: 
+
+[Compiler Explorer TemperatureTest](https://godbolt.org/z/K5r8148jK)
