@@ -16,7 +16,7 @@ Your `BoundedBuffer` features the following API:
 * `back` – returns the last element in the buffer; it allows modification of the last element
 * `push` – inserts a new element into the buffer
 * `pop` – removes the first element from the buffer
-* `swap` – swaps the contents with another `BoundedBuffer` (parameter)
+* ~~`swap` – swaps the contents with another `BoundedBuffer` (parameter)~~ _only makes sence for other implementation strategies that don't contain the elements directly_
 
 
 Furthermore, your `BoundedBuffer` must feature the following *member types*:
