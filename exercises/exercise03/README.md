@@ -36,7 +36,7 @@ BoundedBuffer<S> buffer{23};
 
 
 ### Data Structure
-You will not be able to use an `std::array` for storing the elements anymore (since it requires knowing the number of elements at compile-time). Instead, allocate an array of `T` objects on the heap using `new T[]`. And store the pointer to that array in your `BoundedBuffer`.
+You will not be able to use an `std::array` for storing the elements anymore (since it requires knowing the number of elements at compile-time). Instead, allocate an array of `T` objects on the heap using `std::make_unique<T[]>(size)`. And store the unique pointer in your `BoundedBuffer`.
 
 * What is the type of the member variable for storing the elements?
 
